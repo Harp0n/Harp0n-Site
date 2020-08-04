@@ -11,8 +11,8 @@ var color = "#faff53";
 
 function Box() {
 
-    this.half_size = 8;
-    this.x = Math.floor((Math.random() * c.height) + 1);
+    this.half_size = Math.floor((Math.random() * 15) + 5);
+    this.x = Math.floor((Math.random() * c.width) + 1);
     this.y = Math.floor((Math.random() * c.height) + 1);
     this.r = 2.2;
     this.color = color;
@@ -48,7 +48,7 @@ function Box() {
         };
     }
     this.rotate = function () {
-        var speed = (60 - this.half_size) / 20;
+        var speed = 0.1 + this.half_size*0.11;
         this.x += speed;
         this.y += speed;
     }
@@ -82,7 +82,7 @@ function draw() {
     };
 
     for (var i = 0; i < boxes.length; i++) {
-        collisionDetection(i)
+        //collisionDetection(i)
         boxes[i].draw();
     };
     requestAnimationFrame(draw);
@@ -91,7 +91,7 @@ function draw() {
 resize();
 draw();
 
-while (boxes.length < 35) {
+while (boxes.length < 100) {
     boxes.push(new Box());
 }
 
