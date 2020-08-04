@@ -40,7 +40,7 @@ function Box() {
     this.x = Math.floor((Math.random() * c.width) + 1);
     this.y = Math.floor((Math.random() * c.height) + 1);
     this.r = 2.2;
-	var colorPercentage = (1 - (this.half_size - this.min_size*this.scale)/size_dif/this.scale) * 65;
+	var colorPercentage = (1 - (this.half_size - this.min_size*this.scale)/size_dif/this.scale) * 70;
     this.color = shadeColor(color, -colorPercentage);
 	console.log(colorPercentage);
 
