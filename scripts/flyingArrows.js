@@ -9,13 +9,40 @@ function resize() {
 
 var color = "#faff53";
 
-function Box() {
+function shadeColor(color, percent) {
 
-    this.half_size = Math.floor((Math.random() * 15) + 5);
+    var R = parseInt(color.substring(1,3),16);
+    var G = parseInt(color.substring(3,5),16);
+    var B = parseInt(color.substring(5,7),16);
+
+    R = parseInt(R * (100 + percent) / 100);
+    G = parseInt(G * (100 + percent) / 100);
+    B = parseInt(B * (100 + percent) / 100);
+
+    R = (R<255)?R:255;  
+    G = (G<255)?G:255;  
+    B = (B<255)?B:255;  
+
+    var RR = ((R.toString(16).length==1)?"0"+R.toString(16):R.toString(16));
+    var GG = ((G.toString(16).length==1)?"0"+G.toString(16):G.toString(16));
+    var BB = ((B.toString(16).length==1)?"0"+B.toString(16):B.toString(16));
+
+    return "#"+RR+GG+BB;
+}
+
+function Box() {
+	
+	this.scale =  c.height / 640;
+	this.min_size = 3
+	this.max_size = 12
+	var	 size_dif = this.max_size - this.min_size;
+    this.half_size = ((Math.random() * size_dif) + this.min_size) * this.scale;
     this.x = Math.floor((Math.random() * c.width) + 1);
     this.y = Math.floor((Math.random() * c.height) + 1);
     this.r = 2.2;
-    this.color = color;
+	var colorPercentage = (1 - (this.half_size - this.min_size*this.scale)/size_dif/this.scale) * 65;
+    this.color = shadeColor(color, -colorPercentage);
+	console.log(colorPercentage);
 
     this.getDots = function () {
 
@@ -48,7 +75,8 @@ function Box() {
         };
     }
     this.rotate = function () {
-        var speed = 0.1 + this.half_size*0.11;
+		
+        var speed = (0.2 + this.half_size*0.08) * this.scale;
         this.x += speed;
         this.y += speed;
     }
@@ -59,7 +87,7 @@ function Box() {
         ctx.lineTo(dots.p3.x, dots.p3.y);
         ctx.lineTo(dots.p2.x, dots.p2.y);
         // ctx.lineTo(dots.p4.x, dots.p4.y);
-        ctx.strokeStyle = color;
+        ctx.strokeStyle = this.color;
         ctx.stroke();
 
 
