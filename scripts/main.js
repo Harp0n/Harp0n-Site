@@ -1,21 +1,24 @@
-var mobileNav = document.querySelector(".mobile-nav");
-var toggleButton = document.querySelector(".toggle-btn");
+let mobileNav = $(".mobile-nav").first();
+let toggleButton = $(".toggle-btn").first();
+let canvas = $("#canvas").first(); 
 
-mobileNav.style.display = "none"; 
+mobileNav.css("display", "none"); 
 
-toggleButton.addEventListener("click", function() {
+toggleButton.click(function() {
     // mobileNav.style.display = 'block';
     // backdrop.style.display = 'block';
-    if(mobileNav.classList.contains("active")) {
-        mobileNav.classList.remove("active"); 
+    if(mobileNav.hasClass("active")) {
+        mobileNav.removeClass("active"); 
+        canvas.removeClass("canvas--blurred");
         setTimeout(function () {
-            mobileNav.style.display = "none"; 
+            mobileNav.css("display", "none"); 
         }, 300);
     }
     else {
-        mobileNav.style.display = "block";
+        mobileNav.css("display", "block"); 
+        canvas.addClass("canvas--blurred");
         setTimeout(function () {
-            mobileNav.classList.add("active");
+            mobileNav.addClass("active");
         }, 10);
     }
-  });
+});

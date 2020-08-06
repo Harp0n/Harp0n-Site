@@ -1,3 +1,8 @@
+:root {
+  --yellow-color: #faff53;
+}
+
+
 * {
     box-sizing: border-box;
 }
@@ -7,12 +12,25 @@ body {
     font-family: 'Bebas Neue';
 }
 
+section {
+  width: 100vw;
+  height: 100vh;
+  border: 1px solid var(--yellow-color);
+}
+
+.main-header {
+  width:100vw; 
+  height: 3rem;
+  vertical-align: middle;
+  background: transparent;
+  z-index: 101;
+  position: fixed; 
+}
 
 .toggle-btn {
-    z-index: 101;
-    position: fixed; 
+    position: absolute; 
     right: 0.5rem;
-    top: 0.5rem;
+    /* top: 0.5rem; */
     width: 3rem;
     background: transparent;
     border: none;
@@ -20,8 +38,9 @@ body {
     padding-top: 0;
     padding-bottom: 0;
     vertical-align: middle;
-
+    background: black;
 }
+
 .toggle-btn:focus,
 .toggle-btn:hover {
     outline: none;
@@ -37,9 +56,9 @@ body {
 
 }
 .mobile-nav {
-  background: black;
+  /* background: black; */
   position: fixed;
-  z-index: 50;
+  z-index: 51;
   width: 100vw;
   height: 100vh;    
   top: 0;
@@ -86,25 +105,32 @@ body {
 
   .mobile-nav__item a > p:first-letter {
     font-size: 6rem;
-    color: #faff53;
+    color: var(--yellow-color);
     letter-spacing: 0.5rem;
   }
 
 
-.logo {
+.logo-section__main-div {
     width: 100vw;
     height: 100vh;
     z-index: -1; 
-    position: fixed;
+    position: absolute;
+    margin: auto;
     background-image: url("../pictures/LogoNew.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    animation: harpon-start 1s ease-in; 
+}
+
+#team-logo__logo-div {
+  background-position: top center;
+  width: 80vw;
+  height: 70vw;
 }
 
 .active {
   opacity: 1 !important;
-
 }
 
 
@@ -112,7 +138,63 @@ body {
     background-color: black;
     /* filter: blur(1.5px); */
     position: fixed;
+    /* z-index: 50; */
     z-index:-100;
     width: 100%;
     height: 100%;
+    animation: canvas-blur 0.3s reverse;  
 }
+
+.canvas--blurred {
+  z-index: 50 !important;
+  filter: blur(1px);
+  animation: canvas-blur 0.3s normal;  
+}
+
+.team__main-div {
+  position: relative;
+}
+.team__main-div > img {
+  width: 90%;
+}
+
+.projects__main-div {
+  position: relative;
+  height: 15vh;
+}
+.projects__main-div > img {
+  width: 75%;
+}
+
+.carouselExampleIndicators {
+  height: 50vw;
+}
+
+h1 {
+  position: absolute; 
+  left: 61%; 
+  top: 60%;
+  font-size: 3rem; 
+  color: white
+}
+
+@keyframes canvas-blur {
+  from {
+    filter: blur(0px);
+  }
+  to {
+    filter: blur(1px);
+  }
+}
+
+@keyframes harpon-start { 
+  from {
+    transform: blur(5px) translateY(2%);
+    opacity: 0;
+  }
+  to {
+    transform: blur(0px) translateY(0); 
+    opacity: 1;
+  }
+}
+
