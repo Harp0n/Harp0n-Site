@@ -12,32 +12,49 @@
   position: absolute;
   top: -30vh;
   right: -30vw;
-  transform: rotateZ(30deg);
+  -webkit-transform: rotateZ(30deg);
+          transform: rotateZ(30deg);
   background-color: #d1cfcd;
   z-index: 1;
 }
+
 .coperto-container p {
   font-size: 2rem;
 }
 
-.border-line {
-  width: 100%;
-  height: 10px;
-  position: absolute;
-  background-color: #f9d342;
-  top: 80%;
-}
-
 .logo-section {
-  top: 60%;
+  position: relative;
+  top: 50%;
   width: 100%;
-  height: 40%;
+  height: 50%;
   z-index: 100;
 }
 
-#main-logo {
-  width: 50%;
-  height: 50%;
+.bottom-line {
+  width: 100%;
+  height: 13px;
+  left: -16.87px;
+  top: 974.72px;
+  background-color: #F9D342;
 }
 
+.main-logo {
+  width: 80%;
+  margin-left: 60px;
+}
+
+.main-logo img {
+  width: 100%;
+}
+
+.main-logo h2 {
+  width: 100%;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 6.25vw;
+  color: #EEEEEE;
+}
 /*# sourceMappingURL=main.css.map */
