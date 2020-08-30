@@ -1,45 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Harp0n</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="styles/main.css" />
-  </head>
 
-  <body>
-    <header class="main-header"></header>
-    <section class="main-page">
-      <div class="rotating-div">
-        <div class="rotating-div--coding"></div>
-        <nav class="rotating-div--navbar">
-          <p>ABOUT US</p>
-          <p>TEAM</p>
-          <p>CONTACT</p>
-          <p>PROJECTS</p>
-        </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harp0n</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  <link rel="stylesheet" href="styles/main-arrow.css" />
+  <link rel="stylesheet" href="styles/main-project-pure.css" />
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+
+<body>
+  <header class="main-header"></header>
+  <section class="main-page">
+    <div class="rotating-div">
+      <div class="rotating-div--coding"></div>
+      <nav class="rotating-div--navbar">
+        <p>ABOUT US</p>
+        <p>TEAM</p>
+        <p>CONTACT</p>
+        <p>PROJECTS</p>
+      </nav>
+    </div>
+
+    <div class="logo-section">
+      <div class="main-logo">
+        <img src="assets/img/harp0nfinal.png" alt="Error" />
+        <h2>LET IDEAS HAPPEN</h2>
       </div>
+      <div class="bottom-line"></div>
+    </div>
+  </section>
+  <section class="team-page"></section>
 
-      <div class="logo-section">
-        <div class="main-logo">
-          <img src="assets/img/harp0nfinal.png" alt="Error" />
-          <h2>LET IDEAS HAPPEN</h2>
+  <section class="projects-page">
+    <div class="project-carousel">
+      <div class="project--carousel__item active">
+        <div class="project-carousel-navigation">
+          <div class="arrow arrow-left">
+            <div class="arrow-top"></div>
+            <div class="arrow-bottom"></div>
+          </div>
+          <div class="arrow arrow-right">
+            <div class="arrow-top"></div>
+            <div class="arrow-bottom"></div>
+          </div>
         </div>
-        <div class="bottom-line"></div>
+        <div class="project-carousel__item__overview">
+          <img
+            src="https://images.unsplash.com/photo-1593642634524-b40b5baae6bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80"
+            alt="..." />
+          <div class="project-carousel__item__overview__technologies">
+            <ul>
+              <li><i class="fab fa-unity icon-size"></i></li>
+              <li><i class="fab fa-js icon-size"></i></li>
+              <li><i class="fab fa-css3 icon-size"></i></li>
+              <li><i class="fab fa-bootstrap icon-size"></i></li>
+
+            </ul>
+          </div>
+        </div>
+        <div class="project--carousel__item__text">
+          <div class="project--carousel__item__text__title">
+            <h2>Game created for Brackey game jam in just a couple of days!</h2>
+            <h1>Patch Up</h1>
+          </div>
+          <div class="project--carousel__item__text-description">
+            <div class="project--carousel__item__text-description__inner">
+              <p>
+                Patch Up is about surviving on a ship. Your mission is to patch all holes in the ship! Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
+              </p>
+            </div>
+            <div class="project--carousel__item__text-description__lists">
+              <p>Done by:</p>
+              <ul>
+                <li>Radosław Karbowiak</li>
+                <li>Paweł Kubala</li>
+                <li>Piotr Szymański</li>
+              </ul>
+            </div>
+          </div>
+          <div class="project--carousel__item__text-description__links">
+            <ul>
+              <li><i class="fab fa-github"></i><a href="https://github.com/Harp0n/Harp0n-Site">GitHub</a></li>
+              <li><i class="fab fa-github"></i><a href="https://github.com/Harp0n/Harp0n-Site">GitHub</a></li>
+            </ul>
+          </div>
+        </div>
+
       </div>
-    </section>
-    <section class="team-page"></section>
-    <section class="projects-page"></section>
-  </body>
+
+      <div class="project--carousel__item">
+        <div class="project--carousel__item__img">
+          <img
+            src="https://images.unsplash.com/photo-1509576931792-214960705f8a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1266&q=80"
+            alt="..." />
+        </div>
+        <div class="project--carousel__item__text">
+          <h1>Projekt</h1>
+        </div>
+      </div>
+
+      <div class="project--carousel__item">
+        <div class="project--carousel__item__img">
+          <img
+            src="https://images.unsplash.com/photo-1578377375762-cbcc98d68af0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+            alt="..." />
+        </div>
+        <div class="project--carousel__item__text">
+          <h1>Projekt</h1>
+        </div>
+      </div>
+
+
+      <div class="project--carousel__item">
+        <div class="project--carousel__item__img">
+          <img
+            src="https://images.unsplash.com/photo-1521931961826-fe48677230a5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+            alt="..." />
+        </div>
+        <div class="project--carousel__item__text">
+          <h1>Projekt</h1>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+</body>
+
 </html>

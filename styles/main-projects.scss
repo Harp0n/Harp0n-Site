@@ -1,0 +1,38 @@
+@import "_variables.scss";
+
+.projects-page {
+  background-color: #292826;
+  position: relative;
+}
+
+.project-carousel {
+    display: none;
+}
+
+.active {
+    display: flex;
+}
+
+.project-carousel-item {
+  display: none;
+  height: 100%;
+  width: 100%;
+}
+
+.project-carousel-item-img {
+
+
+  img {
+    height: 500px;
+    width: 500px;
+  }
+}
+
+.project-carousel-item-text {
+    color: white;
+    width: 50%;
+    font-family: "Bebas neue";
+  }
+
+  
+
