@@ -1,5 +1,12 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
   height: 300vh;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 .main-page {
@@ -8,11 +15,6 @@ body {
   height: 100vh;
   position: relative;
   overflow: hidden;
-}
-
-.team-page {
-  border: 2px solid black;
-  height: 100vh;
 }
 
 .projects-page {
