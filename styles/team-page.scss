@@ -1,8 +1,8 @@
 @import "_variables.scss";
 
 a {
-    font-family: "Bebas neue";
-    color: map-get($colors, main-gray)
+  font-family: "Bebas neue";
+  color: map-get($colors, main-gray);
 }
 a:hover,
 a:active {
@@ -10,15 +10,14 @@ a:active {
 }
 .team-page {
   height: 100vh;
-//   border-top: 1px solid map-get($colors, main_yellow);
+  //   border-top: 1px solid map-get($colors, main_yellow);
   background-color: map-get($colors, vanilla);
 }
 
-
 .team-image-container {
-    -webkit-box-shadow: -1px 10px 6px -2px rgba(0,0,0,0.75);
-    -moz-box-shadow: -1px 10px 6px -2px rgba(0,0,0,0.75);
-    box-shadow: -1px 10px 6px -2px rgba(0,0,0,0.75);
+  -webkit-box-shadow: -1px 10px 6px -2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 10px 6px -2px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 10px 6px -2px rgba(0, 0, 0, 0.75);
   position: relative;
   height: 60vh;
   background-color: map-get($colors, main_gray);
@@ -32,13 +31,13 @@ a:active {
     display: flex;
 
     &__img {
+      transition: background-color 0.2s ease-in-out;
       border: none;
       display: flex;
       align-items: flex-end;
       height: 60vh;
       &:hover {
         cursor: pointer;
-        animation: colors 1s forwards ease-in;
         background-color: map-get($colors, main_yellow);
       }
       img {
@@ -58,11 +57,13 @@ a:active {
   align-content: center;
 
   h1 {
+    margin-bottom: 0.5rem;
     font-size: 3.5rem;
     font-weight: 900;
     text-align: center;
     font-family: "Bebas neue";
     ~ h2 {
+      margin-top: 0;
       letter-spacing: 3px;
       color: map-get($colors, dark_red);
     }
@@ -91,43 +92,35 @@ a:active {
         img {
           min-width: 1rem;
           max-width: 6rem;
-          
         }
       }
     }
   }
   &--text {
     flex: 1 1 0px;
-    
+
     p {
       margin-top: 3rem;
       font-size: 1.5rem;
-      font-family: 'Bitter', serif;
+      font-family: "Bitter", serif;
 
-    //   letter-spacing: 1px;
+      //   letter-spacing: 1px;
       font-weight: 500;
     }
   }
   &--contact {
     flex: 1 1 0px;
     margin-top: 1rem;
-
   }
-  .team-member-info--contact__image { 
-      margin: 1rem auto;
-      img {
-          max-width: 4rem;
-      }
+  .team-member-info--contact__image {
+    margin: 1rem auto;
+    img {
+      max-width: 4rem;
+    }
   }
 }
 
-
-
-@keyframes colors {
-  from {
-    background-color: transparent;
-  }
-  to {
-    background-color: map-get($colors, main_yellow);
-  }
+.yellow-background {
+  transition: none;
+  background-color: map-get($colors, main_yellow);
 }

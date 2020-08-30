@@ -31,6 +31,8 @@ a:active {
 }
 
 .team-image-container--images__img {
+  -webkit-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
   border: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -43,8 +45,6 @@ a:active {
 
 .team-image-container--images__img:hover {
   cursor: pointer;
-  -webkit-animation: colors 1s forwards ease-in;
-          animation: colors 1s forwards ease-in;
   background-color: #f9d342;
 }
 
@@ -68,6 +68,7 @@ a:active {
 }
 
 .team-member-info h1 {
+  margin-bottom: 0.5rem;
   font-size: 3.5rem;
   font-weight: 900;
   text-align: center;
@@ -75,6 +76,7 @@ a:active {
 }
 
 .team-member-info h1 ~ h2 {
+  margin-top: 0;
   letter-spacing: 3px;
   color: #bf5748;
 }
@@ -123,7 +125,7 @@ a:active {
 .team-member-info--text p {
   margin-top: 3rem;
   font-size: 1.5rem;
-  font-family: 'Bitter', serif;
+  font-family: "Bitter", serif;
   font-weight: 500;
 }
 
@@ -142,21 +144,9 @@ a:active {
   max-width: 4rem;
 }
 
-@-webkit-keyframes colors {
-  from {
-    background-color: transparent;
-  }
-  to {
-    background-color: #f9d342;
-  }
-}
-
-@keyframes colors {
-  from {
-    background-color: transparent;
-  }
-  to {
-    background-color: #f9d342;
-  }
+.yellow-background {
+  -webkit-transition: none;
+  transition: none;
+  background-color: #f9d342;
 }
 /*# sourceMappingURL=team-page.css.map */
