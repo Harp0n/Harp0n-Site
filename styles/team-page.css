@@ -2,10 +2,6 @@ a {
   font-family: "Bebas neue";
 }
 
-h2,h1,h3 {
-  margin: 0;
-}
-
 a:hover,
 a:active {
   text-decoration: none;
@@ -13,11 +9,12 @@ a:active {
 
 .team-page {
   height: 100vh;
-  border-top: 1px solid #f9d342;
   background-color: #ffefca;
 }
 
 .team-image-container {
+  -webkit-box-shadow: -1px 10px 6px -2px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 10px 6px -2px rgba(0, 0, 0, 0.75);
   position: relative;
   height: 60vh;
   background-color: #292826;

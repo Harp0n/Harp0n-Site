@@ -10,12 +10,15 @@ a:active {
 }
 .team-page {
   height: 100vh;
-  border-top: 1px solid map-get($colors, main_yellow);
+//   border-top: 1px solid map-get($colors, main_yellow);
   background-color: map-get($colors, vanilla);
 }
 
 
 .team-image-container {
+    -webkit-box-shadow: -1px 10px 6px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 10px 6px -2px rgba(0,0,0,0.75);
+    box-shadow: -1px 10px 6px -2px rgba(0,0,0,0.75);
   position: relative;
   height: 60vh;
   background-color: map-get($colors, main_gray);
@@ -88,6 +91,7 @@ a:active {
         img {
           min-width: 1rem;
           max-width: 6rem;
+          
         }
       }
     }
