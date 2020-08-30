@@ -1,0 +1,133 @@
+@import "_variables.scss";
+
+a {
+    font-family: "Bebas neue";
+    color: map-get($colors, main-gray)
+}
+a:hover,
+a:active {
+  text-decoration: none;
+}
+.team-page {
+  height: 100vh;
+//   border-top: 1px solid map-get($colors, main_yellow);
+  background-color: map-get($colors, vanilla);
+}
+
+
+.team-image-container {
+    -webkit-box-shadow: -1px 10px 6px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 10px 6px -2px rgba(0,0,0,0.75);
+    box-shadow: -1px 10px 6px -2px rgba(0,0,0,0.75);
+  position: relative;
+  height: 60vh;
+  background-color: map-get($colors, main_gray);
+  overflow: hidden;
+
+  &--images {
+    position: relative;
+
+    width: 70vw;
+    margin: 0 auto;
+    display: flex;
+
+    &__img {
+      border: none;
+      display: flex;
+      align-items: flex-end;
+      height: 60vh;
+      &:hover {
+        cursor: pointer;
+        animation: colors 1s forwards ease-in;
+        background-color: map-get($colors, main_yellow);
+      }
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.team-member-info {
+  margin-top: 1rem;
+  height: calc(40vh - 2rem);
+  text-align: center;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    text-align: center;
+    font-family: "Bebas neue";
+    ~ h2 {
+      letter-spacing: 3px;
+      color: map-get($colors, dark_red);
+    }
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-family: "Bebas neue";
+    text-align: center;
+  }
+  &--skills {
+    position: relative;
+    flex: 1 1 0px;
+    margin-top: 1rem;
+
+    .skills-list {
+      width: 70%;
+      margin: auto;
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+
+      &--image {
+        margin: auto;
+        img {
+          min-width: 1rem;
+          max-width: 6rem;
+          
+        }
+      }
+    }
+  }
+  &--text {
+    flex: 1 1 0px;
+    
+    p {
+      margin-top: 3rem;
+      font-size: 1.5rem;
+      font-family: 'Bitter', serif;
+
+    //   letter-spacing: 1px;
+      font-weight: 500;
+    }
+  }
+  &--contact {
+    flex: 1 1 0px;
+    margin-top: 1rem;
+
+  }
+  .team-member-info--contact__image { 
+      margin: 1rem auto;
+      img {
+          max-width: 4rem;
+      }
+  }
+}
+
+
+
+@keyframes colors {
+  from {
+    background-color: transparent;
+  }
+  to {
+    background-color: map-get($colors, main_yellow);
+  }
+}

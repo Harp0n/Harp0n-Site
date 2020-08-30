@@ -1,128 +1,154 @@
+html {
+  overflow: hidden;
+}
+
 * {
-    box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
-    background: black;
-    font-family: 'Bebas Neue';
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
 }
 
-
-.toggle-btn {
-    z-index: 101;
-    position: fixed; 
-    right: 0.5rem;
-    top: 0.5rem;
-    width: 3rem;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding-top: 0;
-    padding-bottom: 0;
-  vertical-align: middle;
-
+section {
+  width: 100%;
+  height: 100vh;
+  /* Scroll Snap */
+  scroll-snap-align: center;
 }
-.toggle-btn:focus,
-.toggle-btn:hover {
-    outline: none;
-    cursor: pointer;
-}
-.toggle-btn__bar {
-    background-color: white;
-    width: 100%;
-    height: 0.2rem;
-    display: block;
-    margin: 0.6rem 0;
 
-
+.container--scroll {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
 }
-.mobile-nav {
-    display: none;
-    background: black;
-    position: fixed;
-    z-index: 50;
-    width: 100vw;
-    height: 100vh;    
-    top: 0;
-    left: 0;
-    transition: 1s;
 
+.main-page {
+  position: relative;
+  background-color: #292826;
+  width: 100vw;
+  height: 100vh;
 }
-.mobile-nav__items {
-    position: absolute;
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-items: center;
-    justify-content: center;
-    padding: 0;
-    margin: 0 15%;
-    list-style: none;
+
+.projects-page {
+  height: 100vh;
+}
+
+.rotating-div {
+  width: 100vw;
+  height: 50vh;
+  position: absolute;
+  top: -50vh;
+  left: 60%;
+  -webkit-transform: rotateZ(30deg);
+          transform: rotateZ(30deg);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  z-index: 1;
+}
+
+@media (max-width: 40rem) {
+  .rotating-div {
+    -webkit-transform: rotateZ(45deg);
+            transform: rotateZ(45deg);
   }
-
-.mobile-nav__item {
-    margin: 0;
-    padding: 0;
-  }
-  
-.mobile-nav__item a {
-    text-decoration: none;
-    color: white;
-    font-size: 3rem;
-  }
-
-  .mobile-nav__item a > p {
-    margin: 0;
-    padding: 0;
-    line-height: 0.95;
-    transition: 1s all ease-in-out;
-}
-.mobile-nav__item a > p:hover,
-.mobile-nav__item a > p:active {
-    border-bottom: 0.1rem solid #faff53;
 }
 
-
-
-  .mobile-nav__item a > p:first-letter {
-    font-size: 6rem;
-    color: #faff53;
-    letter-spacing: 0.5rem;
-  }
-
-
-.logo {
-    width: 100vw;
-    height: 100vh;
-    z-index: -1; 
-    position: fixed;
-    background-image: url("../pictures/LogoNew.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+.rotating-div--coding {
+  height: calc(100% - 4rem);
+  background-color: #d1cfcd;
 }
 
-@-webkit-keyframes fadeIn {
-    from { opacity: 0; }
-      to { opacity: 1; }
-}
-@keyframes fadeIn {
-    from { opacity: 0; }
-      to { opacity: 1; }
+.rotating-div--navbar {
+  -webkit-box-shadow: 0px 8px 23px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 8px 23px 0px rgba(0, 0, 0, 0.5);
+  height: 3rem;
+  background-color: #f9d342;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  align-items: center;
+  max-width: 60rem;
 }
 
-.active {
-    display: block;
-    -webkit-animation: fadeIn 0.5s;
-    animation: fadeIn 0.5s;
+.rotating-div--navbar p {
+  margin: auto 2rem;
+  font-size: 2rem;
+  font-family: "Bebas neue";
+  text-align: center;
 }
 
-
-#canvas {
-    background-color: black;
-    position: fixed;
-    z-index:-100;
-    width: 100%;
-    height: 100%;
+.rotating-div--navbar p:first-of-type {
+  margin-left: 8rem;
 }
+
+.logo-section {
+  color: white;
+  width: 100%;
+  height: 60vh;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+  text-align: center;
+  top: 30%;
+}
+
+.logo-section--motto {
+  width: 60vw;
+  height: 40vh;
+}
+
+.logo-section--motto__image {
+  height: 50vh;
+  width: 100%;
+  background: url("../assets/img/harp0nfinal.png") no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.logo-section--motto__text {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto";
+  letter-spacing: 2rem;
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+.bottom-line {
+  width: 100%;
+  height: 1rem;
+  background-color: #f9d342;
+}
+/*# sourceMappingURL=main.css.map */
