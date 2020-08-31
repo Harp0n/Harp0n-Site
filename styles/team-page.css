@@ -98,22 +98,28 @@ a:active {
 
 .team-member-info--skills .skills-list {
   width: 70%;
+  height: 60%;
   margin: auto;
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 1fr;
+  -ms-grid-rows: (1fr)[auto-fill];
+      grid-template-rows: repeat(auto-fill, 1fr);
+  -webkit-column-gap: 0.1rem;
+          column-gap: 0.1rem;
+  row-gap: 0.5rem;
+  -webkit-transition: opacity ease-in-out 0.1s;
+  transition: opacity ease-in-out 0.1s;
 }
 
 .team-member-info--skills .skills-list--image {
-  margin: auto;
-}
-
-.team-member-info--skills .skills-list--image img {
-  min-width: 1rem;
-  max-width: 6rem;
+  background-image: url("../assets/img/skills/css_logo.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .team-member-info--text {
