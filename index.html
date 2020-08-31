@@ -19,173 +19,241 @@
   <link rel="stylesheet" href="styles/main-project-pure.css" />
   <link rel="stylesheet" href="styles/main.css" />
   <script src="scripts/main.js" defer></script>
+  <script src="/js/src/carousel-project.js" defer></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 
 </head>
 
 <body>
   <div class="container--scroll">
-  <header class="main-header"></header>
+    <header class="main-header"></header>
 
-  <section class="main-page">
-    <div class="rotating-div">
-      <div class="rotating-div--coding"></div>
-      <nav class="rotating-div--navbar">
-        <p>ABOUT US</p>
-        <p>TEAM</p>
-        <p>CONTACT</p>
-        <p>PROJECTS</p>
-      </nav>
-    </div>
-    <div class="logo-section">
-      <div class="logo-section--motto">
-        <div class="logo-section--motto__image">
-        </div>
-        <div class="logo-section--motto__text">LET IDEAS HAPPEN</div>
+    <section class="main-page">
+      <div class="rotating-div">
+        <div class="rotating-div--coding"></div>
+        <nav class="rotating-div--navbar">
+          <p>ABOUT US</p>
+          <p>TEAM</p>
+          <p>CONTACT</p>
+          <p>PROJECTS</p>
+        </nav>
       </div>
-      <div class="bottom-line"></div>
-    </div>
-  </section>
+      <div class="logo-section">
+        <div class="logo-section--motto">
+          <div class="logo-section--motto__image">
+          </div>
+          <div class="logo-section--motto__text">LET IDEAS HAPPEN</div>
+        </div>
+        <div class="bottom-line"></div>
+      </div>
+    </section>
 
-  <section class="team-page">
-    <div class="team-image-container">
-      <div class="team-image-container--images">
-        <div class="team-image-container--images__img" data-name="Radosław Karbowiak">
-          <img src="assets/img/radek.png" />
-        </div>
-        <div class="team-image-container--images__img" data-name="Paweł Kubala">
-          <img src="assets/img/pawel.png" />
-        </div>
-        <div class="team-image-container--images__img" data-name="Sebastian Pięta">
-          <img src="assets/img/seba.png" />
-        </div>
-        <div class="team-image-container--images__img" data-name="Michał Janik">
-          <img src="assets/img/michal.png" />
-        </div>
-        <div class="team-image-container--images__img" data-name="Piotr Szymański">
-          <img src="assets/img/piotrek.png" />
-        </div>
-      </div>
-    </div>
-    <div class="team-member-info">
-      <div class="team-member-info--skills">
-        <h2>Skills</h2>
-        <div class="skills-list">
-          <div class="skills-list--image">
-            <img src="assets/img/html_logo.png" />
+    <section class="team-page">
+      <div class="team-image-container">
+        <div class="team-image-container--images">
+          <div class="team-image-container--images__img" data-name="Radosław Karbowiak">
+            <img src="assets/img/radek.png" />
           </div>
-          <div class="skills-list--image">
-            <img src="assets/img/css_logo.png" />
+          <div class="team-image-container--images__img" data-name="Paweł Kubala">
+            <img src="assets/img/pawel.png" />
           </div>
-          <div class="skills-list--image">
-            <img src="assets/img/js_logo.png" />
+          <div class="team-image-container--images__img" data-name="Sebastian Pięta">
+            <img src="assets/img/seba.png" />
           </div>
-          <div class="skills-list--image">
-            <img src="assets/img/react_logo.png" />
+          <div class="team-image-container--images__img" data-name="Michał Janik">
+            <img src="assets/img/michal.png" />
+          </div>
+          <div class="team-image-container--images__img" data-name="Piotr Szymański">
+            <img src="assets/img/piotrek.png" />
           </div>
         </div>
       </div>
-      <div class="team-member-info--text">
-        <h1>Paweł Kubala</h1>
-        <h2>Harp0n Frontend Developer</h2>
-        <p>
-          IT student at Wroclaw University of Science and Technology
-        </p>
-      </div>
-      <div class="team-member-info--contact">
-        <h2>Contact me</h2>
-        <div class="team-member-info--contact__image">
-          <a href="https://github.com/Kubciooo" target="_blank">
-            <img src="assets/img/github.svg" /></a>
-        </div>
-        <div class="team-member-info--contact__image">
-          <a href="https://www.linkedin.com/in/pkubala/" target="_blank">
-            <img src="assets/img/LinkedIn_logo.png" /></a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="projects-page">
-    <div class="project-carousel">
-      <div class="project--carousel__item active">
-        <div class="project-carousel-navigation">
-          <div class="arrow arrow-left">
-            <div class="arrow-top"></div>
-            <div class="arrow-bottom"></div>
-          </div>
-          <div class="arrow arrow-right">
-            <div class="arrow-top"></div>
-            <div class="arrow-bottom"></div>
-          </div>
-        </div>
-        <div class="project-carousel__item__overview">
-          <img
-            src="https://images.unsplash.com/photo-1593642634524-b40b5baae6bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80"
-            alt="..." />
-          <div class="project-carousel__item__overview__technologies">
-            <ul>
-              <li><i class="fab fa-unity icon-size"></i></li>
-              <li><i class="fab fa-js icon-size"></i></li>
-              <li><i class="fab fa-css3 icon-size"></i></li>
-              <li><i class="fab fa-bootstrap icon-size"></i></li>
-
-            </ul>
-          </div>
-        </div>
-        <div class="project--carousel__item__text">
-          <div class="project--carousel__item__text__title">
-            <h2>Game created for Brackey game jam in just a couple of days!</h2>
-            <h1>Patch Up</h1>
-          </div>
-          <div class="project--carousel__item__text-description">
-            <div class="project--carousel__item__text-description__inner">
-              <p>
-                Patch Up is about surviving on a ship. Your mission is to patch all holes in the ship! Lorem ipsum
-                dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-              </p>
+      <div class="team-member-info">
+        <div class="team-member-info--skills">
+          <h2>Skills</h2>
+          <div class="skills-list">
+            <div class="skills-list--image">
+              <img src="assets/img/html_logo.png" />
             </div>
-            <div class="project--carousel__item__text-description__lists">
-              <p>Done by:</p>
+            <div class="skills-list--image">
+              <img src="assets/img/css_logo.png" />
+            </div>
+            <div class="skills-list--image">
+              <img src="assets/img/js_logo.png" />
+            </div>
+            <div class="skills-list--image">
+              <img src="assets/img/react_logo.png" />
+            </div>
+          </div>
+        </div>
+        <div class="team-member-info--text">
+          <h1>Paweł Kubala</h1>
+          <h2>Harp0n Frontend Developer</h2>
+          <p>
+            IT student at Wroclaw University of Science and Technology
+          </p>
+        </div>
+        <div class="team-member-info--contact">
+          <h2>Contact me</h2>
+          <div class="team-member-info--contact__image">
+            <a href="https://github.com/Kubciooo" target="_blank">
+              <img src="assets/img/github.svg" /></a>
+          </div>
+          <div class="team-member-info--contact__image">
+            <a href="https://www.linkedin.com/in/pkubala/" target="_blank">
+              <img src="assets/img/LinkedIn_logo.png" /></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects-page">
+      <div class="project-carousel-navigation">
+        <div class="arrow-left">
+          <div class="arrow-left-top"></div>
+          <div class="arrow-left-bottom"></div>
+        </div>
+        <div class="arrow-right">
+          <div class="arrow-right-top"></div>
+          <div class="arrow-right-bottom"></div>
+        </div>
+      </div>
+
+      <div class="project-carousel">
+        <div class="project--carousel__item">
+          <div class="project-carousel__item__overview">
+            <img
+              src="https://images.unsplash.com/photo-1593642634524-b40b5baae6bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80"
+              alt="..." />
+            <div class="project-carousel__item__overview__technologies">
               <ul>
-                <li>Radosław Karbowiak</li>
-                <li>Paweł Kubala</li>
-                <li>Piotr Szymański</li>
+                <li><i class="fab fa-unity icon-size"></i></li>
+                <li><i class="fab fa-js icon-size"></i></li>
+                <li><i class="fab fa-css3 icon-size"></i></li>
+                <li><i class="fab fa-bootstrap icon-size"></i></li>
               </ul>
             </div>
           </div>
-          <div class="project--carousel__item__text-description__links">
-            <ul>
-              <li><i class="fab fa-github"></i><a href="https://github.com/Harp0n/Harp0n-Site">GitHub</a></li>
-              <li><i class="fab fa-github"></i><a href="https://github.com/Harp0n/Harp0n-Site">GitHub</a></li>
-            </ul>
+          <div class="project--carousel__item__text">
+            <div class="project--carousel__item__text__title">
+              <h2>Game created for Brackey game jam in just a couple of days!</h2>
+              <h1>Patch Up</h1>
+            </div>
+            <div class="project--carousel__item__text-description">
+              <div class="project--carousel__item__text-description__inner">
+                <p>
+                  Patch Up is about surviving on a ship. Your mission is to patch all holes in the ship! Lorem ipsum
+                  dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+                </p>
+              </div>
+              <div class="project--carousel__item__text-description__lists">
+                <p>Done by:</p>
+                <ul>
+                  <li>Radosław Karbowiak</li>
+                  <li>Paweł Kubala</li>
+                  <li>Piotr Szymański</li>
+                </ul>
+              </div>
+            </div>
+            <div class="project--carousel__item__text-description__links">
+              <ul>
+                <li><i class="fab fa-github"></i><a href="https://github.com/Harp0n/Harp0n-Site">GitHub</a></li>
+                <li><i class="fab fa-github"></i><a href="https://github.com/Harp0n/Harp0n-Site">GitHub</a></li>
+              </ul>
+            </div>
+          </div> <!-- project items -->
+        </div>
+
+        <div class="project--carousel__item">
+          <div class="project-carousel__item__overview">
+            <img
+              src="https://images.unsplash.com/photo-1509576931792-214960705f8a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1266&q=80"
+              alt="..." />
+            <div class="project-carousel__item__overview__technologies">
+              <ul>
+                <li><i class="fab fa-unity icon-size"></i></li>
+                <li><i class="fab fa-js icon-size"></i></li>
+                <li><i class="fab fa-css3 icon-size"></i></li>
+                <li><i class="fab fa-bootstrap icon-size"></i></li>
+              </ul>
+            </div>
           </div>
-        </div>
+          <div class="project--carousel__item__text">
+            <div class="project--carousel__item__text__title">
+              <h2>App for android smarthphones to keep track with phone settings!</h2>
+              <h1>Notify Me</h1>
+            </div>
+            <div class="project--carousel__item__text-description">
+              <div class="project--carousel__item__text-description__inner">
+                <p>
+                  Patch Up is about surviving on a ship. Your mission is to patch all holes in the ship! Lorem ipsum
+                  dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+                </p>
+              </div>
+              <div class="project--carousel__item__text-description__lists">
+                <p>Done by:</p>
+                <ul>
+                  <li>Radosław Karbowiak</li>
+                  <li>Paweł Kubala</li>
+                  <li>Piotr Szymański</li>
+                </ul>
+              </div>
+            </div>
+            <div class="project--carousel__item__text-description__links">
+              <ul>
+                <li><i class="fab fa-github"></i><a href="https://github.com/Harp0n/Harp0n-Site">GitHub</a></li>
+                <li><i class="fab fa-github"></i><a href="https://github.com/Harp0n/Harp0n-Site">GitHub</a></li>
+              </ul>
+            </div>
+          </div>
+        </div> <!-- project items -->
 
-      </div>
+        <div class="project--carousel__item active">
+          <div class="project-carousel__item__overview">
+            <img
+              src="https://images.unsplash.com/photo-1578377375762-cbcc98d68af0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+              alt="..." />
+            <div class="project-carousel__item__overview__technologies">
+              <ul>
+                <li><i class="fab fa-unity icon-size"></i></li>
+                <li><i class="fab fa-js icon-size"></i></li>
+                <li><i class="fab fa-css3 icon-size"></i></li>
+                <li><i class="fab fa-bootstrap icon-size"></i></li>
+              </ul>
+            </div>
+          </div>
+          <div class="project--carousel__item__text">
+            <div class="project--carousel__item__text__title">
+              <h2>Database of Dungeons and Dragons stuff!</h2>
+              <h1>RPG Project</h1>
+            </div>
+            <div class="project--carousel__item__text-description">
+              <div class="project--carousel__item__text-description__inner">
+                <p>
+                  Patch Up is about surviving on a ship. Your mission is to patch all holes in the ship! Lorem ipsum
+                  dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+                </p>
+              </div>
+              <div class="project--carousel__item__text-description__lists">
+                <p>Done by:</p>
+                <ul>
+                  <li>Radosław Karbowiak</li>
+                  <li>Paweł Kubala</li>
+                  <li>Piotr Szymański</li>
+                </ul>
+              </div>
+            </div>
+            <div class="project--carousel__item__text-description__links">
+              <ul>
+                <li><i class="fab fa-github"></i><a href="https://github.com/Harp0n/Harp0n-Site">GitHub</a></li>
+                <li><i class="fab fa-github"></i><a href="https://github.com/Harp0n/Harp0n-Site">GitHub</a></li>
+              </ul>
+            </div>
+          </div> <!-- project items -->
+        </div>
+    </section>
+  </div>
 
-      <div class="project--carousel__item">
-        <div class="project--carousel__item__img">
-          <img
-            src="https://images.unsplash.com/photo-1509576931792-214960705f8a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1266&q=80"
-            alt="..." />
-        </div>
-        <div class="project--carousel__item__text">
-          <h1>Projekt</h1>
-        </div>
-      </div>
-
-      <div class="project--carousel__item">
-        <div class="project--carousel__item__img">
-          <img
-            src="https://images.unsplash.com/photo-1578377375762-cbcc98d68af0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-            alt="..." />
-        </div>
-        <div class="project--carousel__item__text">
-          <h1>Projekt</h1>
-        </div>
-      </div>
-  </section>
-</div>
 </body>
 
 </html>

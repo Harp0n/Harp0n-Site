@@ -158,10 +158,11 @@ ul {
 }
 
 .arrow-left {
-  left: 1%;
-  top: 66%;
+  left: 5%;
+  top: 70%;
 }
 .arrow-right {
   top: 70%;
-  left: 96%;
+  left: 95%;
 }
+
