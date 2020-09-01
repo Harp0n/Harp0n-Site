@@ -58,7 +58,8 @@ a:active {
 
   h1 {
     margin-bottom: 0.5rem;
-    font-size: 3.5rem;
+    letter-spacing: 2px;
+    font-size: 3.2rem;
     font-weight: 900;
     text-align: center;
     font-family: "Bebas neue";
@@ -70,7 +71,7 @@ a:active {
   }
 
   h2 {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     font-weight: 700;
     font-family: "Bebas neue";
     text-align: center;
@@ -99,16 +100,19 @@ a:active {
         background-position: center;
         background-repeat: no-repeat;
       }
+      &--team {
+        grid-template-columns: repeat(3,1fr);
+      }
     }
   }
   &--text {
     flex: 1 1 0px;
 
     p {
-      margin-top: 3rem;
-      font-size: 1.5rem;
+      // margin-top: 3rem;
+      font-size: 1.3rem;
       font-family: "Bitter", serif;
-
+      text-justify: inter-word ;
       //   letter-spacing: 1px;
       font-weight: 500;
     }
@@ -124,8 +128,6 @@ a:active {
     }
   }
 }
-
-
 .yellow-background {
   transition: none;
   background-color: map-get($colors, main_yellow);
