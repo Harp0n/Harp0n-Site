@@ -42,11 +42,11 @@ section {
 }
 
 .rotating-div {
-  width: 100vw;
-  height: 50vh;
+  width: calc(1.5*67vh);
+  height: calc(1.5*38vh);
   position: absolute;
-  top: -50vh;
-  left: 60%;
+  top: calc(1.5*-38vh);
+  right: calc(1.5*-8.3vh);
   -webkit-transform: rotateZ(30deg);
           transform: rotateZ(30deg);
   -webkit-transform-origin: bottom left;
@@ -54,16 +54,32 @@ section {
   z-index: 1;
 }
 
-@media (max-width: 40rem) {
-  .rotating-div {
-    -webkit-transform: rotateZ(45deg);
-            transform: rotateZ(45deg);
-  }
-}
-
 .rotating-div--coding {
   height: calc(100% - 4rem);
   background-color: #d1cfcd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.rotating-div--coding p:first-of-type {
+  margin-top: 19vh;
+  margin-left: 25%;
+}
+
+.rotating-div--coding p {
+  font-size: 1.5rem;
+  margin: none;
 }
 
 .rotating-div--navbar {
@@ -86,18 +102,13 @@ section {
           align-items: center;
   justify-items: center;
   align-items: center;
-  max-width: 60rem;
 }
 
 .rotating-div--navbar p {
-  margin: auto 2rem;
+  margin: auto;
   font-size: 2rem;
   font-family: "Bebas neue";
   text-align: center;
-}
-
-.rotating-div--navbar p:first-of-type {
-  margin-left: 8rem;
 }
 
 .logo-section {

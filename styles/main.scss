@@ -43,22 +43,31 @@ section {
 }
 
 .rotating-div {
-  width: 100vw;
-  height: 50vh;
+  width: calc(1.5*67vh);
+  height: calc(1.5*38vh);
   position: absolute;
-  top: -50vh;
-  left: 60%;
+  top: calc(1.5*-38vh);
+  right: calc(1.5*-8.3vh);
   transform: rotateZ(30deg);
-  @media (max-width: 40rem) {
-    transform: rotateZ(45deg);
-    // top: 0;
-  }
+ 
   transform-origin: bottom left;
   z-index: 1;
 
   &--coding {
     height: calc(100% - 4rem);
     background-color: map-get($colors, light_gray);
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p:first-of-type {
+      margin-top: 19vh;
+      margin-left: 25%;
+    }
+    p {
+      font-size: 1.5rem; 
+      margin: none; 
+    }
   }
   &--navbar {
     -webkit-box-shadow: 0px 8px 23px 0px rgba(0,0,0,0.5);
@@ -72,16 +81,11 @@ section {
     align-items: center;
     justify-items: center;
     align-items: center;
-    max-width: 60rem;
     p {
-      margin: auto 2rem;
+      margin: auto;
       font-size: 2rem;
       font-family: "Bebas neue";
       text-align: center;
-
-      &:first-of-type {
-        margin-left: 8rem;
-      }
     }
   }
 }
