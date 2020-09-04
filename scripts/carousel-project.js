@@ -1,33 +1,69 @@
-const projectMainElements = document.querySelectorAll(".project--carousel__item");
+const projectMainElements = document.querySelectorAll(
+  ".project--carousel__item"
+);
 const rightArrowElement = document.querySelector(".arrow-right");
 const leftArrowElement = document.querySelector(".arrow-left");
 const projectsLength = projectMainElements.length;
-let index = Array.from(projectMainElements).findIndex(element => element.classList.contains("active"));
+const animationTime = 500;
+let index = Array.from(projectMainElements).findIndex((element) =>
+  element.classList.contains("active")
+);
 
-function nextProject() {
-    projectMainElements[index].classList.remove("active");
-    $('.active').animate( {width: "0px"});
+const projectAnimationHandler = (projectIndex, backwards = false) => {
+  rightArrowElement.disabled = true;
+  leftArrowElement.disabled = true;
+  const fadeOutProjectElement = projectMainElements[projectIndex];
 
-    index++;
+  const nextProjectIndex = backwards
+    ? (projectIndex - 1 + projectsLength) % projectsLength
+    : (projectIndex + 1) % projectsLength;
+  const fadeInProjectElement = projectMainElements[nextProjectIndex];
 
-    if (index >= projectsLength) {
-        index = 0;
-    }
+  const animation = new Promise((resolve, reject) => {
+    fadeOutProjectElement.classList.add(
+      `fade-out${backwards ? "-backwards" : ""}`
+    );
+    fadeInProjectElement.classList.toggle("active");
+    fadeInProjectElement.classList.add(
+      `fade-in${backwards ? "-backwards" : ""}`
+    );
 
-    projectMainElements[index].classList.add("active");
+    setTimeout(() => {
+      fadeOutProjectElement.classList.remove(
+        `fade-out${backwards ? "-backwards" : ""}`
+      );
+      fadeOutProjectElement.classList.toggle("active");
+      fadeInProjectElement.classList.remove(
+        `fade-in${backwards ? "-backwards" : ""}`
+      );
+      resolve("successfully animated projects switch!");
+    }, animationTime);
+  });
+  return animation;
+};
 
+async function nextProject() {
+  rightArrowElement.removeEventListener("click", nextProject);
+  leftArrowElement.removeEventListener("click", lastProject);
+  await projectAnimationHandler(index);
+  index++;
+  index %= projectsLength;
+  rightArrowElement.addEventListener("click", nextProject);
+  leftArrowElement.addEventListener("click", lastProject);
 }
 
+async function lastProject() {
+  rightArrowElement.removeEventListener("click", nextProject);
+  leftArrowElement.removeEventListener("click", lastProject);
+  await projectAnimationHandler(index, true);
+  index--;
 
-function lastProject() {
-    projectMainElements[index].classList.remove("active");
-    index--;
-
-    if (index < 0) {
-        index = projectsLength - 1;
-    }
-
-    projectMainElements[index].classList.add("active");
+  if (index < 0) {
+    index = projectsLength - 1;
+  }
+  console.log("test");
+  rightArrowElement.addEventListener("click", nextProject);
+  leftArrowElement.addEventListener("click", lastProject);
 }
 
 rightArrowElement.addEventListener("click", nextProject);

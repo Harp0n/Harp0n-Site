@@ -1,4 +1,4 @@
-ul { 
+ul {
   list-style: none;
 }
 
@@ -36,7 +36,7 @@ ul {
   height: 100%;
   width: 70%;
   object-fit: cover; /* Do not scale the image */
-  object-position: center; 
+  object-position: center;
 }
 
 .project-carousel__item__overview__technologies ul li {
@@ -116,7 +116,6 @@ ul {
   text-align: left;
   color: #fc8c79;
   margin: 2vw 0 0 0;
-  
 }
 
 .project--carousel__item__text-description__lists ul {
@@ -128,10 +127,9 @@ ul {
 
 .project--carousel__item__text-description__lists ul li {
   color: #d1cfcd;
-} 
+}
 
-.project--carousel__item__text-description__links
-{
+.project--carousel__item__text-description__links {
   text-align: center;
   font-size: 2rem;
 }
@@ -143,14 +141,13 @@ ul {
 }
 
 .project--carousel__item__text-description__links ul li {
- margin: 0 2rem 0 2rem;
+  margin: 0 2rem 0 2rem;
 }
 
 .project--carousel__item__text-description__links ul li a {
   text-decoration: none;
   color: #ffefca;
 }
-
 
 .fa-github {
   height: 50px;
@@ -166,3 +163,53 @@ ul {
   left: 95%;
 }
 
+.fade-out { 
+  animation: fadeOut 0.5s forwards;
+}
+.fade-in {
+  animation: fadeIn 0.5s forwards;
+}
+.fade-out-backwards {
+  animation: fadeOutBackwards 0.5s forwards;
+}
+.fade-in-backwards {
+  animation: fadeInBackwards 0.5s forwards; 
+}
+
+@keyframes fadeOut {
+  from {
+    /* opacity: 1; */
+    left: 0;
+  }
+  to {
+    /* opacity: 0; */
+    left: -100%;
+    
+  }
+}
+
+@keyframes fadeIn { 
+  from {
+    right: -100%;
+  }
+  to {
+    right: 0; 
+  }
+}
+
+@keyframes fadeOutBackwards {
+  from {
+    right: 0; 
+  }
+  to {
+    right: -100%;
+  }
+}
+@keyframes fadeInBackwards { 
+  from {
+    left: -100%; 
+  }
+  to {
+    left: 0;
+  }
+}
