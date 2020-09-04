@@ -19,6 +19,9 @@
   <link rel="stylesheet" href="styles/main-project-pure.css" />
   <link rel="stylesheet" href="styles/main.css" />
   <script src="scripts/main.js" defer></script>
+  <script src="scripts/carousel-project.js" defer></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
 
 </head>
 
@@ -267,20 +270,20 @@
     <div class="team-member-info">
     </div>
   </section>
-
   <section class="projects-page">
+    <div class="project-carousel-navigation">
+      <div class="arrow-left">
+        <div class="arrow-left-top"></div>
+        <div class="arrow-left-bottom"></div>
+      </div>
+      <div class="arrow-right">
+        <div class="arrow-right-top"></div>
+        <div class="arrow-right-bottom"></div>
+      </div>
+    </div>
+
     <div class="project-carousel">
-      <div class="project--carousel__item active">
-        <div class="project-carousel-navigation">
-          <div class="arrow arrow-left">
-            <div class="arrow-top"></div>
-            <div class="arrow-bottom"></div>
-          </div>
-          <div class="arrow arrow-right">
-            <div class="arrow-top"></div>
-            <div class="arrow-bottom"></div>
-          </div>
-        </div>
+      <div class="project--carousel__item">
         <div class="project-carousel__item__overview">
           <img
             src="https://images.unsplash.com/photo-1593642634524-b40b5baae6bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80"
@@ -291,7 +294,6 @@
               <li><i class="fab fa-js icon-size"></i></li>
               <li><i class="fab fa-css3 icon-size"></i></li>
               <li><i class="fab fa-bootstrap icon-size"></i></li>
-
             </ul>
           </div>
         </div>
@@ -322,32 +324,99 @@
               <li><i class="fab fa-github"></i><a href="https://github.com/Harp0n/Harp0n-Site">GitHub</a></li>
             </ul>
           </div>
-        </div>
-
+        </div> <!-- project items -->
       </div>
 
       <div class="project--carousel__item">
-        <div class="project--carousel__item__img">
+        <div class="project-carousel__item__overview">
           <img
             src="https://images.unsplash.com/photo-1509576931792-214960705f8a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1266&q=80"
             alt="..." />
+          <div class="project-carousel__item__overview__technologies">
+            <ul>
+              <li><i class="fab fa-unity icon-size"></i></li>
+              <li><i class="fab fa-js icon-size"></i></li>
+              <li><i class="fab fa-css3 icon-size"></i></li>
+              <li><i class="fab fa-bootstrap icon-size"></i></li>
+            </ul>
+          </div>
         </div>
         <div class="project--carousel__item__text">
-          <h1>Projekt</h1>
+          <div class="project--carousel__item__text__title">
+            <h2>App for android smarthphones to keep track with phone settings!</h2>
+            <h1>Notify Me</h1>
+          </div>
+          <div class="project--carousel__item__text-description">
+            <div class="project--carousel__item__text-description__inner">
+              <p>
+                Patch Up is about surviving on a ship. Your mission is to patch all holes in the ship! Lorem ipsum
+                dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+              </p>
+            </div>
+            <div class="project--carousel__item__text-description__lists">
+              <p>Done by:</p>
+              <ul>
+                <li>Radosław Karbowiak</li>
+                <li>Paweł Kubala</li>
+                <li>Piotr Szymański</li>
+              </ul>
+            </div>
+          </div>
+          <div class="project--carousel__item__text-description__links">
+            <ul>
+              <li><i class="fab fa-github"></i><a href="https://github.com/Harp0n/Harp0n-Site">GitHub</a></li>
+              <li><i class="fab fa-github"></i><a href="https://github.com/Harp0n/Harp0n-Site">GitHub</a></li>
+            </ul>
+          </div>
         </div>
-      </div>
+      </div> <!-- project items -->
 
-      <div class="project--carousel__item">
-        <div class="project--carousel__item__img">
+      <div class="project--carousel__item active">
+        <div class="project-carousel__item__overview">
           <img
             src="https://images.unsplash.com/photo-1578377375762-cbcc98d68af0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
             alt="..." />
+          <div class="project-carousel__item__overview__technologies">
+            <ul>
+              <li><i class="fab fa-unity icon-size"></i></li>
+              <li><i class="fab fa-js icon-size"></i></li>
+              <li><i class="fab fa-css3 icon-size"></i></li>
+              <li><i class="fab fa-bootstrap icon-size"></i></li>
+            </ul>
+          </div>
         </div>
         <div class="project--carousel__item__text">
-          <h1>Projekt</h1>
-        </div>
+          <div class="project--carousel__item__text__title">
+            <h2>Database of Dungeons and Dragons stuff!</h2>
+            <h1>RPG Project</h1>
+          </div>
+          <div class="project--carousel__item__text-description">
+            <div class="project--carousel__item__text-description__inner">
+              <p>
+                Patch Up is about surviving on a ship. Your mission is to patch all holes in the ship! Lorem ipsum
+                dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+              </p>
+            </div>
+            <div class="project--carousel__item__text-description__lists">
+              <p>Done by:</p>
+              <ul>
+                <li>Radosław Karbowiak</li>
+                <li>Paweł Kubala</li>
+                <li>Piotr Szymański</li>
+              </ul>
+            </div>
+          </div>
+          <div class="project--carousel__item__text-description__links">
+            <ul>
+              <li><i class="fab fa-github"></i><a href="https://github.com/Harp0n/Harp0n-Site">GitHub</a></li>
+              <li><i class="fab fa-github"></i><a href="https://github.com/Harp0n/Harp0n-Site">GitHub</a></li>
+            </ul>
+          </div>
+        </div> <!-- project items -->
       </div>
   </section>
+
+
 </div>
 </body>
 
