@@ -7,7 +7,7 @@ a:active {
   text-decoration: none;
 }
 
-.team-page {
+#team-page {
   height: 100vh;
   background-color: #ffefca;
 }

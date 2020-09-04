@@ -2,7 +2,7 @@ ul {
   list-style: none;
 }
 
-.projects-page {
+#projects-page {
   background-color: #292826;
   position: relative;
 }

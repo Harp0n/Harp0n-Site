@@ -30,7 +30,7 @@ section {
   scroll-snap-type: y mandatory;
 }
 
-.main-page {
+#main-page {
     position: relative;
   background-color: map-get($colors, main_gray);
   width: 100vw;
@@ -38,7 +38,7 @@ section {
 
 }
 
-.projects-page {
+#projects-page {
   height: 100vh;
 }
 
@@ -60,13 +60,9 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    p:first-of-type {
-      margin-top: 19vh;
-      margin-left: 25%;
-    }
-    p {
-      font-size: 1.5rem; 
-      margin: none; 
+    div:first-of-type {
+      margin-left: 7vw;
+      font-size: 2.5rem;
     }
   }
   &--navbar {
@@ -86,6 +82,15 @@ section {
       font-size: 2rem;
       font-family: "Bebas neue";
       text-align: center;
+      a {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        color: black;
+      }
+      a:hover {
+        color: rgba(0, 0, 0, 0.7);
+      }
     }
   }
 }
