@@ -1,4 +1,4 @@
-#codeWriter {
+#code-writer {
   display: flex;
   justify-content: center;
   margin-top: 300px;
@@ -10,7 +10,7 @@
   content: '|'; 
 }
 
-.codeBlink:after {
+.code-blink:after {
   content: '|'; 
   animation: blink-animation 1s steps(5, start) infinite;
   -webkit-animation: blink-animation 1s steps(5, start) infinite;

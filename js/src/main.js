@@ -5,7 +5,7 @@ memberInfo.append(teamCard);
 
 
 memberCards.addEventListener("click", (event) => {
-  const teamImages = memberCards.querySelector(".team-image-container--images");
+  const teamImages = memberCards.querySelector(".team-image-container__images");
   for (const child of teamImages.children) {
     child.classList.remove("yellow-background");
   }

@@ -1,5 +1,5 @@
-const codeWriterDiv = document.getElementById("codeWriter");
-const divCode = document.getElementById('codeWrite');
+const codeWriterDiv = document.getElementById("code-writer");
+const divCode = document.getElementById('code-write');
 
 const randomTimeBetweenChars = 350;
 const codeToWrite = `while (true) { \n HarpOn.create(); \n}`;
@@ -38,7 +38,7 @@ function writeLines(code) {
 
         if(i !== code.length - 1) setTimeout(() => currentDiv.classList.remove('code'), timeOut);
         else {
-            setTimeout(() => currentDiv.classList.toggle('codeBlink'), timeOut);
+            setTimeout(() => currentDiv.classList.toggle('code-blink'), timeOut);
         }
     }
 }
@@ -82,23 +82,23 @@ function htmlDivFactory() {
 
 function htmlColorSeter(word, span) {
     if(purpleColorSyntax.includes(word)){
-        span.style.color = "purple";
+        span.style.color = " #601f7e";
     }
     else if (redColorSyntax.includes(word)){
-        span.style.color = "red";
+        span.style.color = "#c25450";
     }
     else if (format.test(word)) {
         span.style.color = "black";
     }
     else {
-        span.style.color = "green";
+        span.style.color = "#005b4a";
     }
 }
 
 function playRandomSoundClick() {
     var sound = new Howl({
         src: [soundSources[Math.floor(Math.random() * soundSources.length)]],
-        volume: 0.1,  
+        volume: 0.005,  
     });
 
     sound.play();
