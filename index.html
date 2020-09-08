@@ -2,130 +2,424 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harp0n</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
-    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" 
-    crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles/main.css">
-    <script src="scripts/background-canvas/flyingArrows.js" defer></script>
-    <script src="scripts/main.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harp0n</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+  <script src="js/lib/howler.core.js"></script>
+  <script src="js/src/coding-container.js" defer></script>
+
+  <script src="js/src/main.js" defer></script>
+  <script src="js/src/carousel-project.js" defer></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+
 
 </head>
 
+<template id="team-card">
+  <div class="team-member-info__skills">
+    <h2>What we use</h2>
+    <div class="skills-list skills-list--team">
+      <div class="skills-list__image" style="background-image: url('assets/img/tools/trello_logo.svg')"></div>
+      <div class="skills-list__image" style="background-image: url('assets/img/tools/vscode_logo.svg')"></div>
+      <div class="skills-list__image" style="background-image: url('assets/img/github.svg')"></div>
+      <div class="skills-list__image"
+        style="background-image: url('assets/img/tools/jira_logo.svg'); grid-column: 1 / 3;"></div>
+      <div class="skills-list__image" style="background-image: url('assets/img/tools/IntelliJ_logo.svg')"></div>
+
+    </div>
+  </div>
+  <div class="team-member-info__text">
+    <h1>Harp0n</h1>
+    <h2>About us</h2>
+    <p>
+      We are a group of friends from Legnica.
+      <br>Our programming interests differ from each other and that's why there's nothing we can't do together.
+    </p>
+  </div>
+  <div class="team-member-info__contact">
+    <h2>Contact us</h2>
+    <div class="team-member-info__contact__image">
+      <a href="https://github.com/Harp0n" id="github" target="_blank">
+        <img src="assets/img/github.svg" /></a>
+    </div>
+    <div class="team-member-info__contact__image">
+      <a href="mailto: quolumbo@gmail.com" id="linkedin" target="_blank">
+        <img src="assets/img/gmail_logo.svg" /></a>
+    </div>
+  </div>
+</template>
+<template id="radek-member-card">
+  <div class="team-member-info__skills">
+    <h2>Skills</h2>
+    <div class="skills-list">
+      <div class="skills-list__image" style="background-image: url('assets/img/skills/java_logo.png')"></div>
+      <div class="skills-list__image" style="background-image: url('assets/img/skills/c_sharp_logo.svg')"></div>
+      <div class="skills-list__image" style="background-image: url('assets/img/skills/node_logo.svg')"></div>
+      <div class="skills-list__image" style="background-image: url('assets/img/skills/sql_logo.png')"></div>
+      <div class="skills-list__image" style="background-image: url('assets/img/skills/html_logo.svg')"></div>
+      <div class="skills-list__image" style="background-image: url('assets/img/skills/css_logo.png')"></div>
+      <div class="skills-list__image" style="background-image: url('assets/img/skills/js_logo.svg')"></div>
+      <div class="skills-list__image" style="background-image: url('assets/img/skills/ts_logo.svg')"></div>
+    </div>
+  </div>
+  <div class="team-member-info__text">
+    <h1>Radosław Karbowiak</h1>
+    <h2>Harp0n Full-Stack Developer</h2>
+    <p>
+      IT student at Wroclaw University of Science and Technology with working experience. Interested in web
+      technologies.
+    </p>
+  </div>
+  <div class="team-member-info__contact">
+    <h2>Contact me</h2>
+    <div class="team-member-info__contact__image">
+      <a href="https://github.com/Reevo55" target="_blank">
+        <img src="assets/img/github.svg" /></a>
+    </div>
+    <div class="team-member-info__contact__image">
+      <a href="https://www.linkedin.com/in/radoslaw-karbowiak/" target="_blank">
+        <img src="assets/img/LinkedIn_logo.png" /></a>
+    </div>
+  </div>
+</template>
+<template id="pawel-member-card">
+  <div class="team-member-info__skills">
+    <h2>Skills</h2>
+    <div class="skills-list">
+      <div class="skills-list__image" style="background-image: url('assets/img/skills/java_logo.png')"></div>
+      <div class="skills-list__image" style="background-image: url('assets/img/skills/python_logo.png')"></div>
+      <div class="skills-list__image" style="background-image: url('assets/img/skills/node_logo.svg')"></div>
+      <div class="skills-list__image" style="background-image: url('assets/img/skills/react_logo.svg')"></div>
+      <div class="skills-list__image" style="background-image: url('assets/img/skills/html_logo.svg')"></div>
+      <div class="skills-list__image" style="background-image: url('assets/img/skills/css_logo.png')"></div>
+      <div class="skills-list__image" style="background-image: url('assets/img/skills/js_logo.svg')"></div>
+      <div class="skills-list__image" style="background-image: url('assets/img/skills/ts_logo.svg')"></div>
+    </div>
+  </div>
+  <div class="team-member-info__text">
+    <h1>Paweł Kubala</h1>
+    <h2>Harp0n Frontend Developer</h2>
+    <p>
+      IT student at Wroclaw University of Science and Technology. He is sexy and he knows it.
+    </p>
+  </div>
+  <div class="team-member-info__contact">
+    <h2>Contact me</h2>
+    <div class="team-member-info__contact__image">
+      <a href="https://github.com/Kubcioooo" target="_blank">
+        <img src="assets/img/github.svg" /></a>
+    </div>
+    <div class="team-member-info__contact__image">
+      <a href="https://www.linkedin.com/in/pkubala/" target="_blank">
+        <img src="assets/img/LinkedIn_logo.png" /></a>
+    </div>
+  </div>
+</template>
+<template id="sebastian-member-card">
+  <div class="team-member-info__skills">
+    <h2>Skills</h2>
+    <div class="skills-list">
+      <div class="skills-list__image" style="background-image: url('assets/img/skills/java_logo.png')"></div>
+      <div class="skills-list__image" style="background-image: url('assets/img/skills/python_logo.png')"></div>
+      <div class="skills-list__image" style="background-image: url('assets/img/skills/C++_logo.svg')"></div>
+      <div class="skills-list__image" style="background-image: url('assets/img/skills/c_sharp_logo.svg')"></div>
+      <div class="skills-list__image" style="background-image: url('assets/img/skills/scala_logo.svg')"></div>
+    </div>
+  </div>
+  <div class="team-member-info__text">
+    <h1>Sebastian Pięta</h1>
+    <h2>Harp0n Backend Developer</h2>
+    <p>
+      Computer Science student at Wrocław University of Science and Technology. Also, hobbyist game developer.
+    </p>
+  </div>
+  <div class="team-member-info__contact">
+    <h2>Contact me</h2>
+    <div class="team-member-info__contact__image">
+      <a href="https://github.com/KraftUnderscore" target="_blank">
+        <img src="assets/img/github.svg" /></a>
+    </div>
+    <div class="team-member-info__contact__image">
+      <a href="https://www.linkedin.com/in/spieta/" target="_blank">
+        <img src="assets/img/LinkedIn_logo.png" /></a>
+    </div>
+  </div>
+</template>
+<template id="michal-member-card">
+  <div class="team-member-info__skills">
+    <h2>Skills</h2>
+    <div class="skills-list">
+      <div class="skills-list__image" style="background-image: url('assets/img/skills/java_logo.png')"></div>
+      <div class="skills-list__image" style="background-image: url('assets/img/skills/python_logo.png')"></div>
+      <div class="skills-list__image" style="background-image: url('assets/img/skills/c_sharp_logo.svg')"></div>
+      <div class="skills-list__image" style="background-image: url('assets/img/skills/sql_logo.png')"></div>
+      <div class="skills-list__image" style="background-image: url('assets/img/skills/tensorflow_logo.svg')"></div>
+      <div class="skills-list__image" style="background-image: url('assets/img/skills/apache_spark_logo.svg')"></div>
+      <div class="skills-list__image" style="background-image: url('assets/img/skills/power_bi_logo.svg')"></div>
+    </div>
+  </div>
+  <div class="team-member-info__text">
+    <h1>Michał Janik</h1>
+    <h2>Harp0n data scientist</h2>
+    <p>
+      Computer Science student at Wrocław University of Science and Technology. Passionate about machine learning and
+      data science.
+    </p>
+  </div>
+  <div class="team-member-info__contact">
+    <h2>Contact me</h2>
+    <div class="team-member-info__contact__image">
+      <a href="https://github.com/mihal09" target="_blank">
+        <img src="assets/img/github.svg" /></a>
+    </div>
+    <div class="team-member-info__contact__image">
+      <a href="https://www.linkedin.com/in/janikmichal/" target="_blank">
+        <img src="assets/img/LinkedIn_logo.png" /></a>
+    </div>
+  </div>
+</template>
+<template id="piotr-member-card">
+  <div class="team-member-info__skills">
+    <h2>Skills</h2>
+    <div class="skills-list">
+      <div class="skills-list__image" style="background-image: url('assets/img/skills/java_logo.png')"></div>
+      <div class="skills-list__image" style="background-image: url('assets/img/skills/python_logo.png')"></div>
+      <div class="skills-list__image" style="background-image: url('assets/img/skills/django_logo.svg')"></div>
+      <div class="skills-list__image" style="background-image: url('assets/img/skills/sql_logo.png')"></div>
+      <div class="skills-list__image" style="background-image: url('assets/img/skills/js_logo.svg')"></div>
+      <div class="skills-list__image" style="background-image: url('assets/img/skills/css_logo.png')"></div>
+      <div class="skills-list__image" style="background-image: url('assets/img/skills/html_logo.svg')"></div>
+    </div>
+  </div>
+  <div class="team-member-info__text">
+    <h1>Piotr Szymański</h1>
+    <h2>Harp0n Full-Stack Developer</h2>
+    <p>
+      Computer Science student at Wrocław University of Science and Technology. Interested in web-development,
+      especially the Django framework.
+
+    </p>
+  </div>
+  <div class="team-member-info__contact">
+    <h2>Contact me</h2>
+    <div class="team-member-info__contact__image">
+      <a href="https://github.com/PitiMonster" target="_blank">
+        <img src="assets/img/github.svg" /></a>
+    </div>
+    <div class="team-member-info__contact__image">
+      <a href="https://www.linkedin.com/in/piotr-szym/" target="_blank">
+        <img src="assets/img/LinkedIn_logo.png" /></a>
+    </div>
+  </div>
+</template>
+
 <body>
-    <header class="main-header">
-        <button class="toggle-btn">
-            <span class="toggle-btn__bar"></span>
-            <span class="toggle-btn__bar"></span>
-            <span class="toggle-btn__bar"></span>
-        </button>
-    </header>
-    <nav class="mobile-nav">
-        <ul class="mobile-nav__items">
-            <li class="mobile-nav__item">
-                <a href="#">
-                    <p>Harpon</p>
-                </a>
-            </li>
-            <li class="mobile-nav__item">
-                <a href="#">
-                    <p>About us</p>
-                </a>
-            </li>
-            <li class="mobile-nav__item">
-                <a href="#">
-                    <p>Reach us</p>
-                </a>
-            </li>
-            <li class="mobile-nav__item">
-                <a href="#">
-                    <p>Projects</p>
-                </a>
-            </li>
-            <li class="mobile-nav__item">
-                <a href="#">
-                    <p>Our team</p>
-                </a>
-            </li>
-            <li class="mobile-nav__item">
-                <a href="#">
-                    <p>Nice</p>
-                </a>
-            </li>
-        </ul>
-    </nav>
-    <canvas id="canvas"></canvas>
-
-
-    <section id="logo">
-        <div class="logo-section__main-div"> </div>
-    </section>
-    <section id="team">
-        <div class="team__main-div">
-            <img src="pictures/LogoNew.png">
-            <h1> TEAM </h1>
-
+  <div class="container--scroll">
+    <header class="main-header"></header>
+    <section id="main-page">
+      <div class="rotating-div">
+        <div class="rotating-div--coding">
+          <div id="code-writer">
+            <div id="code-write"></div>
+          </div>
         </div>
-    </section>
-    <section id="projects">
-        <div class="projects__main-div">
-            <img src="pictures/LogoNew.png" style="width: 90%;">
-            <h1> CREATES </h1>
+        <nav class="rotating-div--navbar">
+          <p><a href='#team-page'>ABOUT US</a></p>
+          <p><a href='#projects-page'>PROJECTS</a></p>
+        </nav>
+      </div>
+      <div class="logo-section">
+        <div class="logo-section--motto">
+          <div class="logo-section--motto__image">
+          </div>
+          <div class="logo-section--motto__text">LET IDEAS HAPPEN</div>
         </div>
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="pictures/cancerApp.png" class="d-block w-100" alt="...">
-                <div class="carousel-inner__container">
-                        ŻYCIE JEST CIĘŻKE <br>
-                        TESTUJĘ SOBIE, JEST DOBRZE ALE NO NIE MA WENY <br> 
-                        DOBRA CZCIONKA POZDRO
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img src="pictures/cancerApp.png" class="d-block w-100" alt="...">
-                <div class="carousel-inner__container">
+        <div class="bottom-line"></div>
+      </div>
+    </section>
 
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img src="pictures/cancerApp.png" class="d-block w-100" alt="...">
-                <div class="carousel-inner__container">
+    <section id="team-page">
+      <div class="team-image-container">
+        <div class="team-image-container__images">
+          <div class="team-image-container__images__img" data-id='radek'>
+            <img src="assets/img/radek.png" />
+          </div>
+          <div class="team-image-container__images__img" data-id='pawel'>
+            <img src="assets/img/pawel.png" />
+          </div>
+          <div class="team-image-container__images__img" data-id='sebastian'>
+            <img src="assets/img/seba.png" />
+          </div>
+          <div class="team-image-container__images__img" data-id='michal'>
+            <img src="assets/img/michal.png" />
+          </div>
+          <div class="team-image-container__images__img" data-id='piotr'>
+            <img src="assets/img/piotrek.png" />
+          </div>
+        </div>
+      </div>
+      <div class="team-member-info">
+      </div>
+    </section>
+    <section id="projects-page">
+      <div class="project-carousel-navigation">
+        <div class="arrow-left">
+          <div class="arrow-left-top"></div>
+          <div class="arrow-left-bottom"></div>
+        </div>
+        <div class="arrow-right">
+          <div class="arrow-right-top"></div>
+          <div class="arrow-right-bottom"></div>
+        </div>
+      </div>
 
-                </div>
+      <div class="project-carousel">
+        <div class="carousel-item">
+          <div class="carousel-item__overview">
+            <img
+              src="https://images.unsplash.com/photo-1593642634524-b40b5baae6bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80"
+              alt="..." />
+            <div class="carousel-item__overview__technologies">
+              <ul>
+                <li><i class="fab fa-unity icon-size"></i></li>
+                <li><i class="fab fa-js icon-size"></i></li>
+                <li><i class="fab fa-css3 icon-size"></i></li>
+                <li><i class="fab fa-bootstrap icon-size"></i></li>
+              </ul>
+            </div>
+          </div>
+          <div class="carousel-item__text">
+            <div class="carousel-item__text--title">
+              <h2>Game created for Brackey game jam in just a couple of days!</h2>
+              <h1>Patch Up</h1>
+            </div>
+            <div class="carousel-item__text-description">
+              <div class="carousel-item__text-description--inner">
+                <p>
+                  Patch Up is about surviving on a ship. Your mission is to patch all holes in the ship! Lorem ipsum
+                  dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+                </p>
+              </div>
+              <div class="carousel-item__text-description--lists">
+                <p>Done by:</p>
+                <ul>
+                  <li>Radosław Karbowiak</li>
+                  <li>Paweł Kubala</li>
+                  <li>Piotr Szymański</li>
+                </ul>
               </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
+            <div class="carousel-item__text-description--links">
+              <ul>
+                <li><i class="fab fa-github"></i><a href="https://github.com/Harp0n/Harp0n-Site">GitHub</a></li>
+                <li><i class="fab fa-github"></i><a href="https://github.com/Harp0n/Harp0n-Site">GitHub</a></li>
+              </ul>
+            </div>
+          </div> <!-- project items -->
+        </div>
+
+        <div class="carousel-item">
+          <div class="carousel-item__overview">
+            <img
+              src="https://images.unsplash.com/photo-1509576931792-214960705f8a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1266&q=80"
+              alt="..." />
+            <div class="carousel-item__overview__technologies">
+              <ul>
+                <li><i class="fab fa-unity icon-size"></i></li>
+                <li><i class="fab fa-js icon-size"></i></li>
+                <li><i class="fab fa-css3 icon-size"></i></li>
+                <li><i class="fab fa-bootstrap icon-size"></i></li>
+              </ul>
+            </div>
           </div>
-    </section>
-    <section id="about-us">
-        
-        <div class="about-us__main-div"></div>
+          <div class="carousel-item__text">
+            <div class="carousel-item__text--title">
+              <h2>App for android smarthphones to keep track with phone settings!</h2>
+              <h1>Notify Me</h1>
+            </div>
+            <div class="carousel-item__text-description">
+              <div class="carousel-item__text-description--inner">
+                <p>
+                  Patch Up is about surviving on a ship. Your mission is to patch all holes in the ship! Lorem ipsum
+                  dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+                </p>
+              </div>
+              <div class="carousel-item__text-description--lists">
+                <p>Done by:</p>
+                <ul>
+                  <li>Radosław Karbowiak</li>
+                  <li>Paweł Kubala</li>
+                  <li>Piotr Szymański</li>
+                </ul>
+              </div>
+            </div>
+            <div class="carousel-item__text-description--links">
+              <ul>
+                <li><i class="fab fa-github"></i><a href="https://github.com/Harp0n/Harp0n-Site">GitHub</a></li>
+                <li><i class="fab fa-github"></i><a href="https://github.com/Harp0n/Harp0n-Site">GitHub</a></li>
+              </ul>
+            </div>
+          </div>
+        </div> <!-- project items -->
+
+        <div class="carousel-item active">
+          <div class="carousel-item__overview">
+            <img
+              src="https://images.unsplash.com/photo-1578377375762-cbcc98d68af0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+              alt="..." />
+            <div class="carousel-item__overview__technologies">
+              <ul>
+                <li><i class="fab fa-unity icon-size"></i></li>
+                <li><i class="fab fa-js icon-size"></i></li>
+                <li><i class="fab fa-css3 icon-size"></i></li>
+                <li><i class="fab fa-bootstrap icon-size"></i></li>
+              </ul>
+            </div>
+          </div>
+          <div class="carousel-item__text">
+            <div class="carousel-item__text--title">
+              <h2>Database of Dungeons and Dragons stuff!</h2>
+              <h1>RPG Project</h1>
+            </div>
+            <div class="carousel-item__text-description">
+              <div class="carousel-item__text-description--inner">
+                <p>
+                  Patch Up is about surviving on a ship. Your mission is to patch all holes in the ship! Lorem ipsum
+                  dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+                </p>
+              </div>
+              <div class="carousel-item__text-description--lists">
+                <p>Done by:</p>
+                <ul>
+                  <li>Radosław Karbowiak</li>
+                  <li>Paweł Kubala</li>
+                  <li>Piotr Szymański</li>
+                </ul>
+              </div>
+            </div>
+            <div class="carousel-item__text-description--links">
+              <ul>
+                <li><i class="fab fa-github"></i><a href="https://github.com/Harp0n/Harp0n-Site">GitHub</a></li>
+                <li><i class="fab fa-github"></i><a href="https://github.com/Harp0n/Harp0n-Site">GitHub</a></li>
+              </ul>
+            </div>
+          </div> <!-- project items -->
+        </div>
     </section>
 
-    <!-- JS, Popper.js, and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
 
+  </div>
 </body>
 
 </html>
