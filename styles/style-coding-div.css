@@ -1,0 +1,34 @@
+#code-writer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 300px;
+  font-family: Arial, 'Helvetica Neue', Helvet;
+  font-size: 30px;
+}
+
+.code::after {
+  content: '|';
+}
+
+.code-blink::after {
+  content: '|';
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+/*# sourceMappingURL=style-coding-div.css.map */

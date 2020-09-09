@@ -1,0 +1,49 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@media (max-width: 40rem), (max-height: 20rem) {
+
+  .main-header {
+    position: fixed;
+    right: 5vw;
+    z-index: 1;
+  }
+
+	#main-page {
+		.rotating-div {
+			display: none;
+		}
+
+		.logo-section {
+      
+			top: 0%;
+			height: 100%;
+			align-items: center;
+
+			&--motto {
+        width: 85vw;
+        margin-top: 20vh;
+
+
+				&__image {
+          background-position-y: top;
+          height: 35vh;
+				}
+
+				&__text {
+          margin-left: 4vw;
+				}
+      }
+      
+      .bottom-line{
+        margin-top: 32vh;
+        margin-bottom: 0vh;
+        justify-self: end;
+        height: 5rem;
+      }
+		}
+	}
+}

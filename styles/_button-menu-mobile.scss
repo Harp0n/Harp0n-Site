@@ -1,0 +1,107 @@
+%burger-btn {
+    position: absolute;
+    width: 8vw;
+    height: .5vh;
+    background: #fff;
+    display: flex;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+    transition: all .5s ease-in-out;
+}
+
+#menu--button {
+    margin-top: 5px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15vw;
+    height: 10vh;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+
+    
+    .menu__burger-btn-left {
+
+        @extend %burger-btn;
+        transform: translateX(-.75rem);
+
+
+        &::before,
+        &::after {
+            content: '';
+            @extend %burger-btn;
+        };
+
+        &::before {
+            transform: translateY(-1rem);
+        };
+
+        &::after {
+            transform: translateY(1rem);
+        };
+
+        
+    }
+
+    .open-left {
+        transform: translateX(-3.125rem);
+        background: transparent;
+        box-shadow: none;
+        position: relative;
+
+
+        &::before {
+            content: '';
+            transform: rotate(45deg) translate(21px, -36px);
+        };
+
+        &::after {
+            transform: rotate(-45deg) translate(22px, 36px);
+        }
+    }
+
+
+    .menu__burger-btn-right {
+
+        @extend %burger-btn;
+        transform: translateX(.75rem);
+
+        &::before,
+        &::after {
+            content: '';
+            @extend %burger-btn;
+        };
+
+        &::before {
+            transform: translateY(-1rem);
+        };
+
+        &::after {
+            transform: translateY(1rem);
+        };
+
+        
+    }
+
+    .open-right {
+        display: flex;
+        transform: translateX(3.125rem);
+        background: transparent;
+        box-shadow: none;
+        position: absolute;
+        left: 30;
+
+        &::before {
+            content: '';
+            transform: rotate(-45deg) translate(-21px, -35px);
+        };
+
+        &::after {
+            transform: rotate(45deg) translate(-20px, 35px);
+        }
+    }
+    
+}
+
+
