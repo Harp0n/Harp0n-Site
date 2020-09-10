@@ -2,19 +2,19 @@
     position: absolute;
     width: 6.7vw;
     height: .5vh;
-    background: #fff;
+    background: map-get($map: $colors, $key: mobile_names_white);
     display: flex;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+    box-shadow: 0 2px 5px map-get($map: $colors, $key: dark_purple);
     transition: all .5s ease-in-out;
 }
 
 #menu--button {
     margin-top: 5px;
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    justify-items: center;
     width: 15vw;
     height: 10vh;
     cursor: pointer;
