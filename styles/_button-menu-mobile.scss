@@ -1,6 +1,6 @@
 %burger-btn {
     position: absolute;
-    width: 8vw;
+    width: 6.7vw;
     height: .5vh;
     background: #fff;
     display: flex;
@@ -24,7 +24,7 @@
     .menu__burger-btn-left {
 
         @extend %burger-btn;
-        transform: translateX(-.75rem);
+        transform: translateX(-.6rem);
 
 
         &::before,
@@ -53,11 +53,11 @@
 
         &::before {
             content: '';
-            transform: rotate(45deg) translate(21px, -36px);
+            transform: rotate(45deg) translate(23px, -36px);
         };
 
         &::after {
-            transform: rotate(-45deg) translate(22px, 36px);
+            transform: rotate(-45deg) translate(24px, 36px);
         }
     }
 
@@ -94,14 +94,12 @@
 
         &::before {
             content: '';
-            transform: rotate(-45deg) translate(-21px, -35px);
+            transform: rotate(-45deg) translate(-23px, -35px);
         };
 
         &::after {
-            transform: rotate(45deg) translate(-20px, 35px);
+            transform: rotate(45deg) translate(-22px, 35px);
         }
     }
     
 }
-
-

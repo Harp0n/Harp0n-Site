@@ -839,13 +839,6 @@ ul {
   }
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
 @media (max-width: 40rem), (max-height: 20rem) {
   .main-header {
     position: fixed;
@@ -884,7 +877,7 @@ ul {
 
 #menu--button .menu__burger-btn-left, #menu--button .menu__burger-btn-left::before, #menu--button .menu__burger-btn-left::after, #menu--button .menu__burger-btn-right, #menu--button .menu__burger-btn-right::before, #menu--button .menu__burger-btn-right::after {
   position: absolute;
-  width: 8vw;
+  width: 6.7vw;
   height: .5vh;
   background: #fff;
   display: -webkit-box;
@@ -917,8 +910,8 @@ ul {
 }
 
 #menu--button .menu__burger-btn-left {
-  -webkit-transform: translateX(-0.75rem);
-          transform: translateX(-0.75rem);
+  -webkit-transform: translateX(-0.6rem);
+          transform: translateX(-0.6rem);
 }
 
 #menu--button .menu__burger-btn-left::before, #menu--button .menu__burger-btn-left::after {
@@ -946,13 +939,13 @@ ul {
 
 #menu--button .open-left::before {
   content: '';
-  -webkit-transform: rotate(45deg) translate(21px, -36px);
-          transform: rotate(45deg) translate(21px, -36px);
+  -webkit-transform: rotate(45deg) translate(23px, -36px);
+          transform: rotate(45deg) translate(23px, -36px);
 }
 
 #menu--button .open-left::after {
-  -webkit-transform: rotate(-45deg) translate(22px, 36px);
-          transform: rotate(-45deg) translate(22px, 36px);
+  -webkit-transform: rotate(-45deg) translate(24px, 36px);
+          transform: rotate(-45deg) translate(24px, 36px);
 }
 
 #menu--button .menu__burger-btn-right {
@@ -989,12 +982,69 @@ ul {
 
 #menu--button .open-right::before {
   content: '';
-  -webkit-transform: rotate(-45deg) translate(-21px, -35px);
-          transform: rotate(-45deg) translate(-21px, -35px);
+  -webkit-transform: rotate(-45deg) translate(-23px, -35px);
+          transform: rotate(-45deg) translate(-23px, -35px);
 }
 
 #menu--button .open-right::after {
-  -webkit-transform: rotate(45deg) translate(-20px, 35px);
-          transform: rotate(45deg) translate(-20px, 35px);
+  -webkit-transform: rotate(45deg) translate(-22px, 35px);
+          transform: rotate(45deg) translate(-22px, 35px);
+}
+
+@media (max-width: 40rem), (max-height: 20rem) {
+  .main-header {
+    position: fixed;
+    right: 5vw;
+    z-index: 1;
+  }
+  #team-page {
+    background-color: #292826;
+  }
+  #team-page .team-image-container,
+  #team-page .team-member-info {
+    display: none;
+  }
+  #team-page .team-mobile {
+    padding: 5vh 10vw;
+    position: relative;
+  }
+  #team-page .team-mobile__logo {
+    top: 5vh;
+    left: 2vw;
+    height: 20vh;
+    width: 90%;
+    background: url("../assets/img/harp0n_team.png") no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+  #team-page .team-mobile__description {
+    margin: 5px 30px;
+    color: #ffefca;
+    color: white;
+    font-size: 1.2rem;
+  }
+  #team-page .team-mobile__members {
+    position: relative;
+    left: -18%;
+    margin: 0;
+    width: 120%;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+  }
+  #team-page .team-mobile__members .first-line {
+    margin-top: 1rem;
+  }
+  #team-page .team-mobile__members .first-line .arrow::after {
+    content: '>';
+    font-weight: bolder;
+    visibility: visible;
+    color: #f9d342;
+  }
+  #team-page .team-mobile__members .first-line .member-fullname {
+    color: white;
+  }
+  #team-page .team-mobile__members .specialization {
+    color: #fc8c79;
+  }
 }
 /*# sourceMappingURL=main.css.map */

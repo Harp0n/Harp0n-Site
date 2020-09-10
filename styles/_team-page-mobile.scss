@@ -1,0 +1,67 @@
+@media (max-width: 40rem), (max-height: 20rem) {
+	.main-header {
+		position: fixed;
+		right: 5vw;
+		z-index: 1;
+	}
+
+	#team-page {
+		.team-image-container,
+		.team-member-info {
+			display: none;
+		}
+
+		background-color: map-get($colors, main_gray);
+
+		.team-mobile {
+			padding: 5vh 10vw;
+			position: relative;
+
+			&__logo {
+				top: 5vh;
+				left: 2vw;
+				height: 20vh;
+				width: 90%;
+
+				background: url('../assets/img/harp0n_team.png') no-repeat;
+				background-size: contain;
+				background-position: center;
+			}
+
+			&__description {
+				margin: 5px 30px;
+				color: map-get($map: $colors, $key: vanilla);
+				color: white;
+				font-size: 1.2rem;
+			}
+
+			&__members {
+				position: relative;
+				left: -18%;
+				margin: 0;
+				width: 120%;
+				margin-top: 2rem;
+				font-size: 1.5rem;
+
+				.first-line {
+					margin-top: 1rem;
+
+					.arrow::after {
+						content: '>';
+						font-weight: bolder;
+						visibility: visible;
+						color: map-get($map: $colors, $key: main_yellow);
+					}
+
+					.member-fullname {
+						color: white;
+					}
+				}
+
+				.specialization {
+					color: #fc8c79;
+				}
+			}
+		}
+	}
+}
