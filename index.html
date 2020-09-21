@@ -44,7 +44,7 @@
     <h2>About us</h2>
     <p>
       We are a group of friends from Legnica.
-      <br>Our programming interests differ from each other and that's why there's nothing we can't do together.
+      <!-- <br>Our programming interests differ from each other and that's why there's nothing we can't do together. -->
     </p>
   </div>
   <div class="team-member-info__contact">
@@ -243,7 +243,7 @@
         <div class="logo-section--motto">
           <div class="logo-section--motto__image">
           </div>
-          <div class="logo-section--motto__text">LET IDEAS HAPPEN</div>
+          <div class="logo-section--motto__text"><span>LET IDEAS HAPPEN</span></div>
         </div>
         <div class="bottom-line"></div>
       </div>
@@ -274,18 +274,22 @@
     </section>
     <section id="projects-page">
       <div class="project-carousel-navigation">
-        <div class="arrow-left">
-          <div class="arrow-left-top"></div>
-          <div class="arrow-left-bottom"></div>
+        <div class="arrow arrow-left">
+          <div class="arrow-bottom"></div>
+          <div class="arrow-top"></div>
         </div>
-        <div class="arrow-right">
-          <div class="arrow-right-top"></div>
-          <div class="arrow-right-bottom"></div>
+        <div class="arrow arrow-right">
+          <div class="arrow-bottom"></div>
+          <div class="arrow-top"></div>
         </div>
       </div>
-
+      <div class="section-title">
+        <img src="./assets/img/projects.png" alt="harp0n projects" class="section-title__img">
+      </div>
       <div class="project-carousel">
-        <div class="carousel-item">
+        <div class="carousel-item active">
+          <div class="carousel-item__mobile-title"><div>Patch Up</div></div>
+
           <div class="carousel-item__overview">
             <img
               src="https://images.unsplash.com/photo-1593642634524-b40b5baae6bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80"
@@ -301,8 +305,8 @@
           </div>
           <div class="carousel-item__text">
             <div class="carousel-item__text--title">
-              <h2>Game created for Brackey game jam in just a couple of days!</h2>
-              <h1>Patch Up</h1>
+              <h2  class="carousel-item__secondary">Game created for Brackey game jam in just a couple of days!</h2>
+              <h1 class="carousel-item__title">Patch Up</h1>
             </div>
             <div class="carousel-item__text-description">
               <div class="carousel-item__text-description--inner">
@@ -312,7 +316,7 @@
                 </p>
               </div>
               <div class="carousel-item__text-description--lists">
-                <p>Done by:</p>
+                <p>By:</p>
                 <ul>
                   <li>Radosław Karbowiak</li>
                   <li>Paweł Kubala</li>
@@ -322,14 +326,16 @@
             </div>
             <div class="carousel-item__text-description--links">
               <ul>
-                <li><i class="fab fa-github"></i><a href="https://github.com/Harp0n/Harp0n-Site">GitHub</a></li>
-                <li><i class="fab fa-github"></i><a href="https://github.com/Harp0n/Harp0n-Site">GitHub</a></li>
+                <li><a href="https://github.com/Harp0n/Harp0n-Site" class="btn--link">Github</a></li>
+                <li><a href="https://github.com/Harp0n/Harp0n-Site" class="btn--link">Demo</a></li>              
               </ul>
             </div>
           </div> <!-- project items -->
         </div>
 
         <div class="carousel-item">
+          <h1 class="carousel-item__mobile-title">Notify Me</h1>
+
           <div class="carousel-item__overview">
             <img
               src="https://images.unsplash.com/photo-1509576931792-214960705f8a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1266&q=80"
@@ -345,8 +351,8 @@
           </div>
           <div class="carousel-item__text">
             <div class="carousel-item__text--title">
-              <h2>App for android smarthphones to keep track with phone settings!</h2>
-              <h1>Notify Me</h1>
+              <h2 class="carousel-item__secondary">App for android smarthphones to keep track with phone settings!</h2>
+              <h1 class="carousel-item__title">Notify Me</h1>
             </div>
             <div class="carousel-item__text-description">
               <div class="carousel-item__text-description--inner">
@@ -356,7 +362,7 @@
                 </p>
               </div>
               <div class="carousel-item__text-description--lists">
-                <p>Done by:</p>
+                <p>By:</p>
                 <ul>
                   <li>Radosław Karbowiak</li>
                   <li>Paweł Kubala</li>
@@ -366,15 +372,17 @@
             </div>
             <div class="carousel-item__text-description--links">
               <ul>
-                <li><i class="fab fa-github"></i><a href="https://github.com/Harp0n/Harp0n-Site">GitHub</a></li>
-                <li><i class="fab fa-github"></i><a href="https://github.com/Harp0n/Harp0n-Site">GitHub</a></li>
+                <li><a href="https://github.com/Harp0n/Harp0n-Site" class="btn--link">Github</a></li>
+                <li><a href="https://github.com/Harp0n/Harp0n-Site" class="btn--link">Demo</a></li>        
               </ul>
             </div>
           </div>
         </div> <!-- project items -->
 
-        <div class="carousel-item active">
+        <div class="carousel-item">
+          <h1 class="carousel-item__mobile-title">RPG Project</h1>
           <div class="carousel-item__overview">
+
             <img
               src="https://images.unsplash.com/photo-1578377375762-cbcc98d68af0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
               alt="..." />
@@ -389,18 +397,17 @@
           </div>
           <div class="carousel-item__text">
             <div class="carousel-item__text--title">
-              <h2>Database of Dungeons and Dragons stuff!</h2>
-              <h1>RPG Project</h1>
+              <h2 class="carousel-item__secondary">Database of Dungeons and Dragons stuff!</h2>
+              <h1 class="carousel-item__title">RPG Project</h1>
             </div>
             <div class="carousel-item__text-description">
               <div class="carousel-item__text-description--inner">
                 <p>
-                  Patch Up is about surviving on a ship. Your mission is to patch all holes in the ship! Lorem ipsum
-                  dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+                  Patch Up is about surviving on a ship. Your mission is to patch all holes in the ship! 
                 </p>
               </div>
               <div class="carousel-item__text-description--lists">
-                <p>Done by:</p>
+                <p>By:</p>
                 <ul>
                   <li>Radosław Karbowiak</li>
                   <li>Paweł Kubala</li>
@@ -410,15 +417,14 @@
             </div>
             <div class="carousel-item__text-description--links">
               <ul>
-                <li><i class="fab fa-github"></i><a href="https://github.com/Harp0n/Harp0n-Site">GitHub</a></li>
-                <li><i class="fab fa-github"></i><a href="https://github.com/Harp0n/Harp0n-Site">GitHub</a></li>
+                <li><a href="https://github.com/Harp0n/Harp0n-Site" class="btn--link">Github</a></li>
+                <li><a href="https://github.com/Harp0n/Harp0n-Site" class="btn--link">Demo</a></li>        
+
               </ul>
             </div>
           </div> <!-- project items -->
         </div>
     </section>
-
-
   </div>
 </body>
 
