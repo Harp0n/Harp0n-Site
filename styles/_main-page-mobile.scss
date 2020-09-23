@@ -1,0 +1,53 @@
+#main-page {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(black, .2);
+    // border: 2px solid map-get($colors, main_yellow);
+    .rotating-div {
+        display: none;
+    }
+
+    .logo-section {
+        height: 100%;
+
+        &--motto__image { 
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-image: url('../assets/img/harp0nfinal.png');
+            background-position: center;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 30%;
+        }
+
+
+        &--motto__text {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 10%; 
+            width: 80%;
+            font-family: "Roboto";
+            font-weight: 100;
+            font-size: 1rem;
+            letter-spacing: 0.5rem;
+            text-align: center;
+            color: white;
+            border-bottom: 2px solid map-get($colors, main_yellow);
+            // border-image-slice: 1; 
+            
+            // border-image-source: linear-gradient(90deg, rgba(41,40,38,1) 0%,  rgba(249,211,66,1) 15%, rgba(249,211,66,1) 85%,  rgba(41,40,38,1) 100%);
+
+        }
+
+    }
+
+
+
+
+
+}

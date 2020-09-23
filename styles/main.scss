@@ -1,22 +1,20 @@
 @import "variables";
-@import "main-page";
-@import "team-page"; 
 @import "animations";
-// @import "main-arrow";
-@media (max-width: 39rem) {
+@import "body";
 
+@media (max-width: 599px) {
     @import "main-project-mobile";
+    @import "main-page-mobile";
+    @import "team-page-mobile";
 }
-@media (min-width: 40rem)
-{
+
+@media (min-width: 600px) {
+    @import "main-page";
     @import "main-arrow";
+    @import "main-project";
+    @import "team-page";
 
-     @import "main-project"; 
+
 }
+
 @import "style-coding-div";
-
-.test {
-    background-color: white;
-    height: 50vh;
-    width: 100%;
-}
