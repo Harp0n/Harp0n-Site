@@ -45,26 +45,46 @@ const projectAnimationHandler = (projectIndex, backwards = false) => {
 async function nextProject() {
   rightArrowElement.removeEventListener("click", nextProject);
   leftArrowElement.removeEventListener("click", lastProject);
+  projectMainElements[index].removeEventListener('swiped-left', nextProject);
+  projectMainElements[index].removeEventListener('swiped-right', lastProject);
   await projectAnimationHandler(index);
   index++;
   index %= projectsLength;
   rightArrowElement.addEventListener("click", nextProject);
   leftArrowElement.addEventListener("click", lastProject);
+  projectMainElements[index].addEventListener('swiped-left', nextProject);
+  projectMainElements[index].addEventListener('swiped-right', lastProject);
 }
 
 async function lastProject() {
   rightArrowElement.removeEventListener("click", nextProject);
   leftArrowElement.removeEventListener("click", lastProject);
+  projectMainElements[index].removeEventListener('swiped-left', nextProject);
+  projectMainElements[index].removeEventListener('swiped-right', lastProject);
   await projectAnimationHandler(index, true);
   index--;
 
   if (index < 0) {
     index = projectsLength - 1;
   }
-  console.log("test");
   rightArrowElement.addEventListener("click", nextProject);
   leftArrowElement.addEventListener("click", lastProject);
+  projectMainElements[index].addEventListener('swiped-left', nextProject);
+  projectMainElements[index].addEventListener('swiped-right', lastProject);
 }
 
 rightArrowElement.addEventListener("click", nextProject);
 leftArrowElement.addEventListener("click", lastProject);
+
+
+const test = document.querySelector('.test');
+
+projectMainElements[index].addEventListener('swiped-left', nextProject);
+projectMainElements[index].addEventListener('swiped-right', lastProject);
+console.log(projectMainElements)
+// for(let i = 0; i < projectMainElements.length; i++) {
+//   console.log(projectMainElements[i])
+//   projectMainElements[i].addEventListener('swiped-left', nextProject);
+//   projectMainElements[i].addEventListener('swiped-right', lastProject);
+// }
+

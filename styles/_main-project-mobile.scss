@@ -3,10 +3,11 @@ ul {
     list-style: none;
 }
 
-#projects-page { 
-    background-color: map-get($colors,main_gray);
+#projects-page {
+    background-color: map-get($colors, main_gray);
 
 }
+
 .section-title {
     font-family: "Bebas neue";
     text-align: center;
@@ -15,7 +16,8 @@ ul {
     padding: 1rem 0;
     margin: 0 auto;
     color: map-get($colors, main_yellow);
-    &__img { 
+
+    &__img {
         width: 100%;
     }
 }
@@ -34,7 +36,7 @@ ul {
         width: 100vw;
         display: none;
         position: absolute;
-        background-color: map-get($colors,main_gray);
+        background-color: map-get($colors, main_gray);
 
         &__overview {
 
@@ -43,7 +45,7 @@ ul {
 
             img {
                 position: absolute;
-                left: 50%; 
+                left: 50%;
                 transform: translateX(-50%);
                 width: 90%;
                 margin: 0 auto;
@@ -51,7 +53,7 @@ ul {
                 object-fit: cover;
                 object-position: center;
                 border-radius: 3px;
-                box-shadow: 0 1rem 2rem rgba(map-get($colors,light_gray), .1);
+                box-shadow: 0 1rem 2rem rgba(map-get($colors, light_gray), .1);
 
 
             }
@@ -132,10 +134,11 @@ ul {
                 margin: 0;
                 margin-right: .5rem;
                 padding: .5rem;
-                
+
 
                 li {
                     color: map-get($colors, vanilla);
+
                     &:not(:last-child) {
 
                         margin-bottom: .5rem;
@@ -187,22 +190,24 @@ ul {
     border-radius: 3px;
     font-size: 2rem;
     transform: skewX(-7deg);
-    &>* { 
+
+    &>* {
         transform: skewX(7deg);
     }
 }
-.btn--link { 
+
+.btn--link {
     margin: auto 0;
     display: inline-block;
     padding: .5rem;
     border: 2px solid map-get($colors, main_yellow);
     box-shadow: 0 1rem 2rem rgba(black, .2);
     border-radius: 3px;
-    transition: all .5s ease; 
+    transition: all .5s ease;
     width: 8rem;
     font-size: 1.5rem;
 
-    &:hover { 
+    &:hover {
         box-shadow: 0 .5rem 1rem rgba(black, .2);
         transform: translateY(3px);
     }
@@ -215,7 +220,6 @@ ul {
     margin: .5rem 1rem;
     color: map-get($colors, main_yellow);
 }
-
 
 .arrow {
     display: none;
